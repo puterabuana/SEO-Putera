@@ -1,0 +1,12 @@
+{
+  "name": "seo-putera-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-site.mjs",
+    "qa:visual": "node scripts/visual-qa.cjs",
+    "serve": "node scripts/serve.mjs"
+  }
+}
