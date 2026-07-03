@@ -19,6 +19,8 @@
     ],
     "scope": "109 pages",
     "categories": ["Technical SEO", "On-Page", "Schema"],
+    "showcaseImage": "/assets/images/projects/puteragani-showcase.webp",
+    "showcaseAlt": "Putera Gani portfolio website preview across desktop, tablet, and mobile devices",
     "image": "/assets/images/audits/rankmath-95.webp",
     "imageAlt": "Rank Math audit for PuteraGani.com showing an SEO score of 95 out of 100"
   },

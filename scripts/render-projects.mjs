@@ -21,15 +21,17 @@ function renderProject(project, index) {
     .map((category) => `<span>${escapeHtml(category)}</span>`)
     .join("");
   const score = project.primaryScore;
+  const hasShowcase = Boolean(project.showcaseImage);
   const supportingScores = (project.supportingScores || [])
     .map((item) => `<span><small>${escapeHtml(item.tool)}</small><strong>${escapeHtml(item.value)}</strong></span>`)
     .join("");
-
-  return `
-            <article class="project-card reveal" data-project-card data-categories="${categories}">
-              <a class="project-card-link" href="${escapeHtml(project.caseStudyUrl)}" aria-label="Open ${escapeHtml(project.name)} SEO case study">
-                <div class="project-visual project-visual-${(index % 3) + 1}">
-                  <div class="project-browser" aria-hidden="true">
+  const projectVisual = hasShowcase
+    ? `<img class="project-showcase-backdrop" src="${escapeHtml(project.showcaseImage)}" alt="" aria-hidden="true" loading="${index === 0 ? "eager" : "lazy"}">
+                  <div class="project-showcase-frame">
+                    <img class="project-showcase-image" src="${escapeHtml(project.showcaseImage)}" alt="${escapeHtml(project.showcaseAlt || `${project.name} website preview`)}" loading="${index === 0 ? "eager" : "lazy"}">
+                  </div>
+                  <div class="project-showcase-vignette" aria-hidden="true"></div>`
+    : `<div class="project-browser" aria-hidden="true">
                     <div class="browser-chrome"><span></span><span></span><span></span><small>${escapeHtml(project.name)}</small></div>
                     <div class="project-thumb">
                       <div class="project-thumb-topline">
@@ -43,7 +45,13 @@ function renderProject(project, index) {
                         <span></span><span></span><span></span>
                       </div>
                     </div>
-                  </div>
+                  </div>`;
+
+  return `
+            <article class="project-card reveal" data-project-card data-categories="${categories}">
+              <a class="project-card-link" href="${escapeHtml(project.caseStudyUrl)}" aria-label="Open ${escapeHtml(project.name)} SEO case study">
+                <div class="project-visual project-visual-${(index % 3) + 1}${hasShowcase ? " project-visual-showcase" : ""}">
+                  ${projectVisual}
                   <div class="score-ticket">
                     <span>${escapeHtml(score.tool)}</span>
                     <strong>${escapeHtml(score.value)}<small>/${escapeHtml(score.max)}</small></strong>
