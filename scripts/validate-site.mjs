@@ -1,9 +1,8 @@
-import assert from "node:assert/strict";
 import { access, readFile, stat } from "node:fs/promises";
-import { dirname, extname, join, normalize, resolve } from "node:path";
+import { dirname, extname, join, resolve } from "node:path";
 
 const root = process.cwd();
-const publicPages = ["index.html", "case-study/puteragani/index.html"];
+const publicPages = ["index.html", "projects/index.html", "case-study/puteragani/index.html", "case-study/wena/index.html"];
 const errors = [];
 
 function check(condition, message) {
@@ -53,6 +52,14 @@ for (const pagePath of publicPages) {
   }
 }
 
+const projects = JSON.parse(await readFile(join(root, "data/projects.json"), "utf8"));
+for (const project of projects) {
+  check(project.slug && project.name && project.caseStudyUrl, "data/projects.json: each project needs slug, name, and caseStudyUrl");
+  check(project.primaryScore?.tool && Number.isFinite(project.primaryScore?.value), `${project.slug}: primary score needs a tool and numeric value`);
+  check(project.published && project.dateLabel, `${project.slug}: audit date is required`);
+  check(Array.isArray(project.categories) && project.categories.length > 0, `${project.slug}: at least one category is required`);
+}
+
 const sitemap = await readFile(join(root, "sitemap.xml"), "utf8");
 check((sitemap.match(/<loc>/g) || []).length === publicPages.length, "sitemap.xml: unexpected URL count");
 
@@ -62,4 +69,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Validation passed: ${publicPages.length} pages, metadata, JSON-LD, assets, and internal paths.`);
+console.log(`Validation passed: ${publicPages.length} pages, ${projects.length} project(s), metadata, JSON-LD, assets, and internal paths.`);

@@ -37,43 +37,52 @@ async function main() {
   const desktopHome = await desktop.newPage();
   results.push(await inspectPage(desktopHome, "/", "seo-putera-home-desktop.png"));
 
+  await desktopHome.locator(".faq-item").nth(1).locator("button").click();
+  results.push({
+    interaction: "homepage accordion",
+    passed: (await desktopHome.locator(".faq-item").nth(1).locator("button").getAttribute("aria-expanded")) === "true"
+  });
+
+  const desktopArchive = await desktop.newPage();
+  results.push(await inspectPage(desktopArchive, "/projects/", "seo-putera-projects-desktop.png"));
+  await desktopArchive.locator('[data-filter="Schema"]').click();
+  results.push({ interaction: "project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === 1 });
+  await desktopArchive.locator('[data-filter="Local SEO"]').click();
+  results.push({ interaction: "local seo project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === 1 });
+
   const desktopCase = await desktop.newPage();
   results.push(await inspectPage(desktopCase, "/case-study/puteragani/", "seo-putera-case-study-desktop.png"));
+  await desktopCase.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "case-study lightbox", passed: await desktopCase.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
 
-  const lightboxTrigger = desktopCase.locator("[data-lightbox]").first();
-  await lightboxTrigger.click();
-  const lightboxOpen = await desktopCase.locator("[data-lightbox-dialog]").evaluate((element) => element.open);
-  results.push({ interaction: "case-study lightbox", passed: lightboxOpen });
+  const desktopWena = await desktop.newPage();
+  results.push(await inspectPage(desktopWena, "/case-study/wena/", "seo-putera-wena-desktop.png"));
+  await desktopWena.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "wena lightbox", passed: await desktopWena.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
   await desktop.close();
 
-  const mobile = await browser.newContext({
-    viewport: { width: 390, height: 844 },
-    deviceScaleFactor: 1,
-    isMobile: true
-  });
+  const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
   const mobileHome = await mobile.newPage();
   results.push(await inspectPage(mobileHome, "/", "seo-putera-home-mobile.png"));
-
   await mobileHome.locator("[data-nav-toggle]").click();
-  const navExpanded = await mobileHome.locator("[data-nav-toggle]").getAttribute("aria-expanded");
-  const navVisible = await mobileHome.locator("[data-nav]").isVisible();
-  results.push({ interaction: "mobile navigation", passed: navExpanded === "true" && navVisible });
+  await mobileHome.locator("[data-nav]").waitFor({ state: "visible" });
+  results.push({
+    interaction: "mobile navigation",
+    passed: (await mobileHome.locator("[data-nav-toggle]").getAttribute("aria-expanded")) === "true" && (await mobileHome.locator("[data-nav]").isVisible())
+  });
 
+  const mobileArchive = await mobile.newPage();
+  results.push(await inspectPage(mobileArchive, "/projects/", "seo-putera-projects-mobile.png"));
   const mobileCase = await mobile.newPage();
   results.push(await inspectPage(mobileCase, "/case-study/puteragani/", "seo-putera-case-study-mobile.png"));
+  const mobileWena = await mobile.newPage();
+  results.push(await inspectPage(mobileWena, "/case-study/wena/", "seo-putera-wena-mobile.png"));
   await mobile.close();
-
   await browser.close();
 
   const failures = results.filter((result) => {
     if ("passed" in result) return !result.passed;
-    return (
-      result.h1Count !== 1 ||
-      result.horizontalOverflow ||
-      result.imagesMissingAlt !== 0 ||
-      result.imageFailures !== 0 ||
-      result.consoleErrors.length !== 0
-    );
+    return result.h1Count !== 1 || result.horizontalOverflow || result.imagesMissingAlt !== 0 || result.imageFailures !== 0 || result.consoleErrors.length !== 0;
   });
 
   console.log(JSON.stringify({ results, failures: failures.length }, null, 2));

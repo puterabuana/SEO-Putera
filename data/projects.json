@@ -1,0 +1,48 @@
+[
+  {
+    "slug": "puteragani",
+    "name": "puteragani.com",
+    "siteUrl": "https://puteragani.com/",
+    "caseStudyUrl": "/case-study/puteragani/",
+    "published": "2026-06-12",
+    "dateLabel": "12 Jun 2026",
+    "featured": true,
+    "summary": "A repeatable technical SEO system covering canonical URLs, structured data, crawl controls, metadata, and validation across 109 production pages.",
+    "primaryScore": {
+      "value": 95,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "SEO Site Checkup", "value": "85/100"},
+      {"tool": "SEOptimer", "value": "A+"}
+    ],
+    "scope": "109 pages",
+    "categories": ["Technical SEO", "On-Page", "Schema"],
+    "image": "/assets/images/audits/rankmath-95.webp",
+    "imageAlt": "Rank Math audit for PuteraGani.com showing an SEO score of 95 out of 100"
+  },
+  {
+    "slug": "wena",
+    "name": "wena.my.id",
+    "siteUrl": "https://wena.my.id/",
+    "caseStudyUrl": "/case-study/wena/",
+    "published": "2026-07-03",
+    "dateLabel": "03 Jul 2026",
+    "featured": false,
+    "summary": "A local business SEO implementation for Wena Self Photo Studio, covering search preview, metadata, social cards, image alt text, crawlability, and local service intent.",
+    "primaryScore": {
+      "value": 92,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "90%"},
+      {"tool": "SEO Site Checkup", "value": "84/100"}
+    ],
+    "scope": "1 local business site",
+    "categories": ["Local SEO", "On-Page", "Performance"],
+    "image": "/assets/images/audits/wena-rankmath-92.webp",
+    "imageAlt": "Rank Math audit for Wena.my.id showing an SEO score of 92 out of 100"
+  }
+]
