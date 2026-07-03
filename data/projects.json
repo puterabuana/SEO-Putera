@@ -44,6 +44,8 @@
     ],
     "scope": "1 local business site",
     "categories": ["Local SEO", "On-Page", "Performance"],
+    "showcaseImage": "/assets/images/projects/wena-showcase.webp",
+    "showcaseAlt": "Wena Self Photo Studio website preview across desktop, tablet, and mobile devices",
     "image": "/assets/images/audits/wena-rankmath-92.webp",
     "imageAlt": "Rank Math audit for Wena.my.id showing an SEO score of 92 out of 100"
   }
