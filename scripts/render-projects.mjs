@@ -3,8 +3,6 @@ import { join } from "node:path";
 
 const root = process.cwd();
 const projects = JSON.parse(await readFile(join(root, "data/projects.json"), "utf8"));
-const startMarker = "<!-- PROJECT_GRID_START -->";
-const endMarker = "<!-- PROJECT_GRID_END -->";
 
 function escapeHtml(value) {
   return String(value)
@@ -15,6 +13,19 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function replaceRegion(html, name, markup, relativePath) {
+  const startMarker = `<!-- ${name}_START -->`;
+  const endMarker = `<!-- ${name}_END -->`;
+  const start = html.indexOf(startMarker);
+  const end = html.indexOf(endMarker);
+  if (start === -1 || end === -1) return html;
+  if (end < start) {
+    throw new Error(`${relativePath}: ${name} markers are out of order`);
+  }
+  return `${html.slice(0, start + startMarker.length)}\n${markup}\n            ${html.slice(end)}`;
+}
+
+/* ---- Project cards (existing gallery) ---- */
 function renderProject(project, index) {
   const categories = project.categories.map(escapeHtml).join(",");
   const categoryLabels = project.categories
@@ -76,19 +87,83 @@ function renderProject(project, index) {
             </article>`;
 }
 
+/* ---- Audit scoreboard (one row per site, all tool scores exposed) ---- */
+function renderScoreRow(project, index) {
+  const audits = project.audits || [];
+  const chips = audits
+    .map(
+      (audit) => `
+                <div class="score-chip${audit.primary ? " is-primary" : ""}">
+                  <span class="score-chip-tool">${escapeHtml(audit.tool)}</span>
+                  <strong class="score-chip-value">${escapeHtml(audit.display)}<small>${escapeHtml(audit.unit || "")}</small></strong>
+                  <span class="score-chip-note">${escapeHtml(audit.note || "")}</span>
+                </div>`
+    )
+    .join("");
+
+  return `
+            <article class="scoreboard-row reveal">
+              <div class="scoreboard-site">
+                <p class="scoreboard-index">${String(index + 1).padStart(2, "0")}</p>
+                <div>
+                  <h3>${escapeHtml(project.name)}</h3>
+                  <p>${escapeHtml(project.type || "")} · ${escapeHtml(project.scope)}</p>
+                  <p class="scoreboard-date">Audited ${escapeHtml(project.dateLabel)}</p>
+                </div>
+                <a class="scoreboard-link" href="${escapeHtml(project.caseStudyUrl)}" aria-label="Open ${escapeHtml(project.name)} evidence">Evidence <span aria-hidden="true">→</span></a>
+              </div>
+              <div class="scoreboard-scores" aria-label="Independent audit scores for ${escapeHtml(project.name)}">${chips}
+              </div>
+            </article>`;
+}
+
+/* ---- Aggregate hero stats ---- */
+function renderStats() {
+  const siteCount = projects.length;
+  const toolNames = new Set();
+  const primaries = [];
+  for (const project of projects) {
+    for (const audit of project.audits || []) {
+      toolNames.add(audit.tool);
+    }
+    if (project.primaryScore?.value) primaries.push(project.primaryScore.value);
+  }
+  const best = primaries.length ? Math.max(...primaries) : 0;
+  const avg = primaries.length ? Math.round(primaries.reduce((a, b) => a + b, 0) / primaries.length) : 0;
+
+  const stats = [
+    { value: String(siteCount), label: "Live sites audited" },
+    { value: String(toolNames.size), label: "Independent audit tools" },
+    { value: `${avg}`, unit: "/100", label: "Average Rank Math score" },
+    { value: `${best}`, unit: "/100", label: "Top verified score" }
+  ];
+
+  return stats
+    .map(
+      (stat) => `
+              <div class="hero-stat">
+                <strong>${escapeHtml(stat.value)}${stat.unit ? `<small>${escapeHtml(stat.unit)}</small>` : ""}</strong>
+                <span>${escapeHtml(stat.label)}</span>
+              </div>`
+    )
+    .join("");
+}
+
 const projectMarkup = projects.map(renderProject).join("\n");
+const scoreboardMarkup = projects.map(renderScoreRow).join("\n");
+const statsMarkup = renderStats();
 
 for (const relativePath of ["index.html", "projects/index.html"]) {
   const path = join(root, relativePath);
-  const html = await readFile(path, "utf8");
-  const start = html.indexOf(startMarker);
-  const end = html.indexOf(endMarker);
+  let html = await readFile(path, "utf8");
 
-  if (start === -1 || end === -1 || end < start) {
-    throw new Error(`${relativePath}: project grid markers are missing or out of order`);
+  if (!html.includes("<!-- PROJECT_GRID_START -->")) {
+    throw new Error(`${relativePath}: project grid markers are missing`);
   }
+  html = replaceRegion(html, "PROJECT_GRID", projectMarkup, relativePath);
+  html = replaceRegion(html, "SCOREBOARD", scoreboardMarkup, relativePath);
+  html = replaceRegion(html, "HERO_STATS", statsMarkup, relativePath);
 
-  const output = `${html.slice(0, start + startMarker.length)}\n${projectMarkup}\n            ${html.slice(end)}`;
-  await writeFile(path, output);
+  await writeFile(path, html);
   console.log(`${relativePath}: rendered ${projects.length} project(s)`);
 }

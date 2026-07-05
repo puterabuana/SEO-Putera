@@ -4,9 +4,10 @@
     "name": "puteragani.com",
     "siteUrl": "https://puteragani.com/",
     "caseStudyUrl": "/case-study/puteragani/",
-    "published": "2026-06-12",
-    "dateLabel": "12 Jun 2026",
+    "published": "2026-07-05",
+    "dateLabel": "05 Jul 2026",
     "featured": true,
+    "type": "Owned editorial website",
     "summary": "A repeatable technical SEO system covering canonical URLs, structured data, crawl controls, metadata, and validation across 109 production pages.",
     "primaryScore": {
       "value": 95,
@@ -14,8 +15,16 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "SEO Site Checkup", "value": "85/100"},
-      {"tool": "SEOptimer", "value": "A+"}
+      {"tool": "SEO Site Checkup", "value": "86/100"},
+      {"tool": "Seobility", "value": "87%"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "95", "unit": "/100", "note": "26 of 28 tests passed", "primary": true},
+      {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "53 passed · above 74 avg"},
+      {"tool": "Seobility", "display": "87", "unit": "%", "note": "Meta & structure 100%"},
+      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
+      {"tool": "Semrush", "display": "92", "unit": "%", "note": "Site Health · AI Search 93%"},
+      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 69"}
     ],
     "scope": "109 pages",
     "categories": ["Technical SEO", "On-Page", "Schema"],
@@ -29,24 +38,33 @@
     "name": "wena.my.id",
     "siteUrl": "https://wena.my.id/",
     "caseStudyUrl": "/case-study/wena/",
-    "published": "2026-07-03",
-    "dateLabel": "03 Jul 2026",
+    "published": "2026-07-05",
+    "dateLabel": "05 Jul 2026",
     "featured": false,
+    "type": "Local business website",
     "summary": "A local business SEO implementation for Wena Self Photo Studio, covering search preview, metadata, social cards, image alt text, crawlability, and local service intent.",
     "primaryScore": {
-      "value": 92,
+      "value": 88,
       "max": 100,
       "tool": "Rank Math"
     },
     "supportingScores": [
       {"tool": "Seobility", "value": "90%"},
-      {"tool": "SEO Site Checkup", "value": "84/100"}
+      {"tool": "SEOptimer", "value": "B+"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "88", "unit": "/100", "note": "23 of 27 tests passed", "primary": true},
+      {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 95%"},
+      {"tool": "SEO Site Checkup", "display": "84", "unit": "/100", "note": "52 passed · above 74 avg"},
+      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
+      {"tool": "Semrush", "display": "98", "unit": "%", "note": "Site Health · AI Search 99%"},
+      {"tool": "PageSpeed", "display": "99", "unit": "/100", "note": "Desktop · mobile 88"}
     ],
     "scope": "1 local business site",
     "categories": ["Local SEO", "On-Page", "Performance"],
     "showcaseImage": "/assets/images/projects/wena-showcase.webp",
     "showcaseAlt": "Wena Self Photo Studio website preview across desktop, tablet, and mobile devices",
     "image": "/assets/images/audits/wena-rankmath-92.webp",
-    "imageAlt": "Rank Math audit for Wena.my.id showing an SEO score of 92 out of 100"
+    "imageAlt": "Rank Math audit for Wena.my.id showing an SEO score of 88 out of 100"
   }
 ]
