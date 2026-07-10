@@ -773,6 +773,10 @@ button {
   min-width: 0;
 }
 
+.project-grid:has(> .project-card:nth-child(4):last-child) .project-card {
+  grid-column: span 6;
+}
+
 .project-card[hidden] {
   display: none;
 }

@@ -77,6 +77,48 @@
     "showcaseAlt": "Fernwood Dental Care website preview across desktop, tablet, and mobile devices"
   },
   {
+    "slug": "kerlyfinance",
+    "name": "kerlyfinance.com",
+    "siteUrl": "https://kerlyfinance.com/",
+    "caseStudyUrl": "/case-study/kerlyfinance/",
+    "published": "2026-07-10",
+    "dateLabel": "10 Jul 2026",
+    "featured": false,
+    "type": "Financial intelligence website",
+    "summary": "Before-and-after SEO optimisation for Kerly Finance, lifting Seobility 80→88, SEO Site Checkup 85→90, and SEOptimer B−→B while improving content depth, link context, and mobile performance.",
+    "comparison": true,
+    "dateBeforeLabel": "09 Jul 2026",
+    "dateAfterLabel": "10 Jul 2026",
+    "primaryScore": {
+      "value": 90,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "80%→88%"},
+      {"tool": "SEO Site Checkup", "value": "85→90"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "24 of 28 tests passed", "primary": true, "delta": 0, "deltaUnit": ""},
+      {"tool": "Seobility", "display": "88", "unit": "%", "note": "Page quality 88% · links 90%", "delta": 8, "deltaUnit": "%"},
+      {"tool": "SEO Site Checkup", "display": "90", "unit": "/100", "note": "53 passed · 6 failed", "delta": 5, "deltaUnit": ""},
+      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ on-page & performance", "delta": null, "deltaLabel": "↑ grade"},
+      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 86", "delta": null, "deltaLabel": "mobile +2"},
+      {"tool": "Yoast", "display": "—", "unit": "", "note": "Post-audit review · no numeric score", "delta": null}
+    ],
+    "auditsBefore": [
+      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "24 of 28 tests passed"},
+      {"tool": "Seobility", "display": "80", "unit": "%", "note": "Page quality 60% · links 65%"},
+      {"tool": "SEO Site Checkup", "display": "85", "unit": "/100", "note": "50 passed · 10 failed"},
+      {"tool": "SEOptimer", "display": "B-", "unit": "", "note": "19 recommendations"},
+      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 84"}
+    ],
+    "scope": "1 finance publishing site",
+    "categories": ["Technical SEO", "On-Page", "GEO"],
+    "showcaseImage": "/assets/images/projects/kerlyfinance-showcase.webp",
+    "showcaseAlt": "Kerly Finance market intelligence website preview across desktop, tablet, and mobile devices"
+  },
+  {
     "slug": "wena",
     "name": "wena.my.id",
     "siteUrl": "https://wena.my.id/",

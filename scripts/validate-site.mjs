@@ -2,7 +2,14 @@ import { access, readFile, stat } from "node:fs/promises";
 import { dirname, extname, join, resolve } from "node:path";
 
 const root = process.cwd();
-const publicPages = ["index.html", "projects/index.html", "case-study/puteragani/index.html", "case-study/wena/index.html"];
+const publicPages = [
+  "index.html",
+  "projects/index.html",
+  "case-study/puteragani/index.html",
+  "case-study/wena/index.html",
+  "case-study/fernwood/index.html",
+  "case-study/kerlyfinance/index.html"
+];
 const errors = [];
 
 function check(condition, message) {

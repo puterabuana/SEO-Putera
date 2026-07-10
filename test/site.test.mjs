@@ -4,7 +4,14 @@ import { join } from "node:path";
 import test from "node:test";
 
 const root = process.cwd();
-const publicPages = ["index.html", "projects/index.html", "case-study/puteragani/index.html", "case-study/wena/index.html"];
+const publicPages = [
+  "index.html",
+  "projects/index.html",
+  "case-study/puteragani/index.html",
+  "case-study/wena/index.html",
+  "case-study/fernwood/index.html",
+  "case-study/kerlyfinance/index.html"
+];
 
 async function read(relativePath) {
   return readFile(join(root, relativePath), "utf8");
@@ -13,11 +20,11 @@ async function read(relativePath) {
 test("homepage communicates positioning, expertise, portfolio, method, and contact path", async () => {
   const html = await read("index.html");
 
-  assert.match(html, /SEO work you can/i);
+  assert.match(html, /My SEO work, scored/i);
   assert.match(html, /95\s*\/\s*100/);
   assert.match(html, /Technical foundations/i);
   assert.match(html, /Structured data/i);
-  assert.match(html, /growing gallery/i);
+  assert.match(html, /websites behind the scores/i);
   assert.match(html, /Verification method/i);
   assert.match(html, /linkedin\.com\/in\/puterabuana/i);
 });
@@ -67,6 +74,19 @@ test("Wena case study presents local SEO evidence without overstating duplicate 
   assert.match(html, /\.pdf/i);
 });
 
+test("Kerly Finance case study separates paired evidence from after-only checks", async () => {
+  const html = await read("case-study/kerlyfinance/index.html");
+
+  assert.match(html, /Kerly Finance/i);
+  assert.match(html, /80%→88%/);
+  assert.match(html, /85→90/);
+  assert.match(html, /B−→B/);
+  assert.match(html, /wrong domain/i);
+  assert.match(html, /Yoast/i);
+  assert.match(html, /not establish.*traffic|traffic.*not/i);
+  assert.match(html, /\.pdf/i);
+});
+
 test("every public page has core search and social metadata", async () => {
   for (const path of publicPages) {
     const html = await read(path);
@@ -107,7 +127,15 @@ test("audit evidence and crawl-control files are shipped", async () => {
     "assets/reports/wena/rankmath-audit.pdf",
     "assets/reports/wena/seobility-audit.pdf",
     "assets/reports/wena/seo-site-checkup-audit.pdf",
-    "assets/reports/wena/supplied-seoptimer-duplicate.pdf",
+    "assets/reports/kerlyfinance/rankmath-before.pdf",
+    "assets/reports/kerlyfinance/rankmath-after.pdf",
+    "assets/reports/kerlyfinance/seobility-before.pdf",
+    "assets/reports/kerlyfinance/seobility-after.pdf",
+    "assets/reports/kerlyfinance/seo-site-checkup-before.pdf",
+    "assets/reports/kerlyfinance/seo-site-checkup-after.pdf",
+    "assets/reports/kerlyfinance/seoptimer-before.pdf",
+    "assets/reports/kerlyfinance/seoptimer-after.pdf",
+    "assets/reports/kerlyfinance/yoast-after.pdf",
     "robots.txt",
     "sitemap.xml"
   ];

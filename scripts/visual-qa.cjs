@@ -64,6 +64,11 @@ async function main() {
   const desktopFernwood = await desktop.newPage();
   results.push(await inspectPage(desktopFernwood, "/case-study/fernwood/", "seo-putera-fernwood-desktop.png"));
   results.push({ interaction: "fernwood evidence table", passed: (await desktopFernwood.locator(".comparison-wrap").boundingBox()).width > 400 });
+
+  const desktopKerly = await desktop.newPage();
+  results.push(await inspectPage(desktopKerly, "/case-study/kerlyfinance/", "seo-putera-kerlyfinance-desktop.png"));
+  await desktopKerly.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "kerlyfinance lightbox", passed: await desktopKerly.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
   await desktop.close();
 
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
@@ -85,6 +90,9 @@ async function main() {
 
   const mobileFernwood = await mobile.newPage();
   results.push(await inspectPage(mobileFernwood, "/case-study/fernwood/", "seo-putera-fernwood-mobile.png"));
+
+  const mobileKerly = await mobile.newPage();
+  results.push(await inspectPage(mobileKerly, "/case-study/kerlyfinance/", "seo-putera-kerlyfinance-mobile.png"));
   await mobile.close();
   await browser.close();
 
