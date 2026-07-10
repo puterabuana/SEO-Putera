@@ -118,6 +118,8 @@
       .comparison-table .delta-same { color: var(--muted); }
 
       .comparison-wrap {
+        grid-column: 7 / -1;
+        min-width: 0;
         overflow-x: auto;
         border: 1px solid var(--soft-line);
         border-radius: 8px;
@@ -186,6 +188,48 @@
         border-right: none;
       }
 
+      .score-white.score-summary {
+        gap: 14px;
+        justify-content: flex-start;
+        padding: 22px 24px;
+      }
+
+      .score-summary-label {
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .score-summary-list {
+        display: grid;
+        gap: 10px;
+        margin-top: 6px;
+      }
+
+      .score-summary-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+        gap: 10px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      .score-white.score-summary strong {
+        margin: 0;
+        color: var(--ink);
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.035em;
+        white-space: nowrap;
+      }
+
+      .score-summary-value b { color: var(--blue); }
+      .score-summary-value small { color: #007d40; font-size: 9px; font-weight: 700; letter-spacing: 0; }
+
       @media (max-width: 640px) {
         .case-scorecard-comparison {
           grid-template-columns: 1fr;
@@ -194,6 +238,15 @@
           border-right: none;
           border-bottom: 1px solid var(--soft-line);
         }
+
+        .score-white.score-summary { padding: 18px; }
+        .score-summary-row { font-size: 10px; gap: 6px; }
+        .score-white.score-summary strong { font-size: 12px; }
+        .comparison-table { min-width: 620px; margin-top: 0; }
+      }
+
+      @media (max-width: 1100px) {
+        .comparison-wrap { grid-column: 1 / -1; }
       }
     </style>
   </head>
@@ -226,7 +279,7 @@
                 <strong>97<small>/100</small></strong>
                 <p>Rank Math SEO Audit</p>
               </div>
-              <div class="score-white" style="display:flex;flex-direction:column;gap:12px;padding:20px 24px;">
+              <div class="score-white score-summary" style="display:flex;flex-direction:column;gap:12px;padding:20px 24px;">
                 <span style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">IMPROVEMENT SUMMARY</span>
                 <div style="display:grid;gap:8px;">
                   <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;">

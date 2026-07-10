@@ -47,8 +47,9 @@ async function main() {
   results.push(await inspectPage(desktopArchive, "/projects/", "seo-putera-projects-desktop.png"));
   await desktopArchive.locator('[data-filter="Schema"]').click();
   results.push({ interaction: "project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === 1 });
+  const localSeoProjectCount = await desktopArchive.locator('[data-project-card][data-categories*="Local SEO"]').count();
   await desktopArchive.locator('[data-filter="Local SEO"]').click();
-  results.push({ interaction: "local seo project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === 1 });
+  results.push({ interaction: "local seo project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === localSeoProjectCount });
 
   const desktopCase = await desktop.newPage();
   results.push(await inspectPage(desktopCase, "/case-study/puteragani/", "seo-putera-case-study-desktop.png"));
@@ -59,6 +60,10 @@ async function main() {
   results.push(await inspectPage(desktopWena, "/case-study/wena/", "seo-putera-wena-desktop.png"));
   await desktopWena.locator("[data-lightbox]").first().click();
   results.push({ interaction: "wena lightbox", passed: await desktopWena.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
+
+  const desktopFernwood = await desktop.newPage();
+  results.push(await inspectPage(desktopFernwood, "/case-study/fernwood/", "seo-putera-fernwood-desktop.png"));
+  results.push({ interaction: "fernwood evidence table", passed: (await desktopFernwood.locator(".comparison-wrap").boundingBox()).width > 400 });
   await desktop.close();
 
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
@@ -77,6 +82,9 @@ async function main() {
   results.push(await inspectPage(mobileCase, "/case-study/puteragani/", "seo-putera-case-study-mobile.png"));
   const mobileWena = await mobile.newPage();
   results.push(await inspectPage(mobileWena, "/case-study/wena/", "seo-putera-wena-mobile.png"));
+
+  const mobileFernwood = await mobile.newPage();
+  results.push(await inspectPage(mobileFernwood, "/case-study/fernwood/", "seo-putera-fernwood-mobile.png"));
   await mobile.close();
   await browser.close();
 

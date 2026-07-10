@@ -72,7 +72,9 @@
       {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 97"}
     ],
     "scope": "18 pages",
-    "categories": ["Local SEO", "On-Page", "GEO"]
+    "categories": ["Local SEO", "On-Page", "GEO"],
+    "showcaseImage": "/assets/images/projects/fernwood-showcase.webp",
+    "showcaseAlt": "Fernwood Dental Care website preview across desktop, tablet, and mobile devices"
   },
   {
     "slug": "wena",
