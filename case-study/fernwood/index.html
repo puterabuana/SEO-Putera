@@ -203,9 +203,11 @@
       }
 
       .score-summary-list {
-        display: grid;
-        gap: 10px;
-        margin-top: 6px;
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 12px;
       }
 
       .score-summary-row {
@@ -228,7 +230,7 @@
       }
 
       .score-summary-footer {
-        margin-top: auto;
+        margin-top: 0;
         padding-top: 14px;
         display: flex;
         align-items: center;
@@ -311,7 +313,7 @@
               </div>
               <div class="score-white score-summary" style="display:flex;flex-direction:column;gap:12px;padding:20px 24px;">
                 <span style="font-size:9px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);">IMPROVEMENT SUMMARY</span>
-                <div style="display:grid;gap:8px;">
+                <div class="score-summary-list">
                   <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:13px;">
                     <span style="color:var(--muted);">Rank Math</span>
                     <strong>94 → <span style="color:var(--blue);">97</span> <small style="color:#007d40;font-size:10px;font-weight:700;">+3</small></strong>
