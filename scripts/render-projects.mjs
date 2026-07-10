@@ -90,16 +90,36 @@ function renderProject(project, index) {
 /* ---- Audit scoreboard (one row per site, all tool scores exposed) ---- */
 function renderScoreRow(project, index) {
   const audits = project.audits || [];
+  const isComparison = Boolean(project.comparison);
+
   const chips = audits
-    .map(
-      (audit) => `
+    .map((audit) => {
+      let deltaHtml = "";
+      if (isComparison) {
+        if (audit.delta != null) {
+          if (audit.delta === 0) {
+            deltaHtml = `\n                  <span class="score-delta is-same">unchanged</span>`;
+          } else {
+            const sign = audit.delta > 0 ? "+" : "";
+            const cls = audit.delta > 0 ? "is-up" : "is-down";
+            deltaHtml = `\n                  <span class="score-delta ${cls}">${sign}${audit.delta}${escapeHtml(audit.deltaUnit || "")}</span>`;
+          }
+        } else if (audit.deltaLabel) {
+          deltaHtml = `\n                  <span class="score-delta is-up">${escapeHtml(audit.deltaLabel)}</span>`;
+        }
+      }
+      return `
                 <div class="score-chip${audit.primary ? " is-primary" : ""}">
                   <span class="score-chip-tool">${escapeHtml(audit.tool)}</span>
-                  <strong class="score-chip-value">${escapeHtml(audit.display)}<small>${escapeHtml(audit.unit || "")}</small></strong>
+                  <strong class="score-chip-value">${escapeHtml(audit.display)}<small>${escapeHtml(audit.unit || "")}</small></strong>${deltaHtml}
                   <span class="score-chip-note">${escapeHtml(audit.note || "")}</span>
-                </div>`
-    )
+                </div>`;
+    })
     .join("");
+
+  const dateHtml = isComparison
+    ? `Audited ${escapeHtml(project.dateBeforeLabel)} → ${escapeHtml(project.dateAfterLabel)} <span class="scoreboard-badge-comparison">Before → After</span>`
+    : `Audited ${escapeHtml(project.dateLabel)}`;
 
   return `
             <article class="scoreboard-row reveal">
@@ -108,7 +128,7 @@ function renderScoreRow(project, index) {
                 <div>
                   <h3>${escapeHtml(project.name)}</h3>
                   <p>${escapeHtml(project.type || "")} · ${escapeHtml(project.scope)}</p>
-                  <p class="scoreboard-date">Audited ${escapeHtml(project.dateLabel)}</p>
+                  <p class="scoreboard-date">${dateHtml}</p>
                 </div>
                 <a class="scoreboard-link" href="${escapeHtml(project.caseStudyUrl)}" aria-label="Open ${escapeHtml(project.name)} evidence">Evidence <span aria-hidden="true">→</span></a>
               </div>

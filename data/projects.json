@@ -34,6 +34,47 @@
     "imageAlt": "Rank Math audit for PuteraGani.com showing an SEO score of 95 out of 100"
   },
   {
+    "slug": "fernwood",
+    "name": "fernwooddentalcare.com",
+    "siteUrl": "https://fernwooddentalcare.com/",
+    "caseStudyUrl": "/case-study/fernwood/",
+    "published": "2026-07-09",
+    "dateLabel": "09 Jul 2026",
+    "featured": false,
+    "type": "Client dental website",
+    "summary": "Before-and-after SEO optimisation for a family dental clinic in South Austin, TX — lifting Rank Math 94→97, Seobility 83%→90%, and SEOptimer B–→B through keyword localisation, sitemap, schema markup, and llms.txt for AI search.",
+    "comparison": true,
+    "dateBeforeLabel": "08 Jul 2026",
+    "dateAfterLabel": "09 Jul 2026",
+    "primaryScore": {
+      "value": 97,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "83%→90%"},
+      {"tool": "SEOptimer", "value": "B–→B"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "97", "unit": "/100", "note": "27 of 28 passed", "primary": true, "delta": 3, "deltaUnit": ""},
+      {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 94% · links 100%", "delta": 7, "deltaUnit": "%"},
+      {"tool": "SEO Site Checkup", "display": "88", "unit": "/100", "note": "54 passed · above 74 avg", "delta": 1, "deltaUnit": ""},
+      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ GEO & performance · A on-page", "delta": null, "deltaLabel": "↑ grade"},
+      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%", "delta": 0, "deltaUnit": "%"},
+      {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 95", "delta": null}
+    ],
+    "auditsBefore": [
+      {"tool": "Rank Math", "display": "94", "unit": "/100", "note": "26 of 28 passed"},
+      {"tool": "Seobility", "display": "83", "unit": "%", "note": "Page quality 75% · links 65%"},
+      {"tool": "SEO Site Checkup", "display": "87", "unit": "/100", "note": "54 passed · 6 failed"},
+      {"tool": "SEOptimer", "display": "B-", "unit": "", "note": "A- on-page · C+ GEO"},
+      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%"},
+      {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 97"}
+    ],
+    "scope": "18 pages",
+    "categories": ["Local SEO", "On-Page", "GEO"]
+  },
+  {
     "slug": "wena",
     "name": "wena.my.id",
     "siteUrl": "https://wena.my.id/",
