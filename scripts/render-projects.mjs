@@ -91,6 +91,7 @@ function renderProject(project, index) {
 function renderScoreRow(project, index) {
   const audits = project.audits || [];
   const isComparison = Boolean(project.comparison);
+  const scoreColumnCount = Math.max(6, ...projects.map((item) => (item.audits || []).length));
 
   const chips = audits
     .map((audit) => {
@@ -116,6 +117,8 @@ function renderScoreRow(project, index) {
                 </div>`;
     })
     .join("");
+  const emptyChips = Array.from({ length: Math.max(0, scoreColumnCount - audits.length) }, () => `
+                <div class="score-chip score-chip-empty" aria-hidden="true"></div>`).join("");
 
   const dateHtml = isComparison
     ? `Audited ${escapeHtml(project.dateBeforeLabel)} → ${escapeHtml(project.dateAfterLabel)} <span class="scoreboard-badge-comparison">Before → After</span>`
@@ -132,7 +135,7 @@ function renderScoreRow(project, index) {
                 </div>
                 <a class="scoreboard-link" href="${escapeHtml(project.caseStudyUrl)}" aria-label="Open ${escapeHtml(project.name)} evidence">Evidence <span aria-hidden="true">→</span></a>
               </div>
-              <div class="scoreboard-scores" aria-label="Independent audit scores for ${escapeHtml(project.name)}">${chips}
+              <div class="scoreboard-scores" aria-label="Independent audit scores for ${escapeHtml(project.name)}">${chips}${emptyChips}
               </div>
             </article>`;
 }
@@ -154,7 +157,7 @@ function renderStats() {
   const stats = [
     { value: String(siteCount), label: "Live sites audited" },
     { value: String(toolNames.size), label: "Independent audit tools" },
-    { value: `${avg}`, unit: "/100", label: "Average Rank Math score" },
+    { value: `${avg}`, unit: "/100", label: "Average primary audit score" },
     { value: `${best}`, unit: "/100", label: "Top verified score" }
   ];
 

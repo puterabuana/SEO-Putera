@@ -8,7 +8,9 @@ const publicPages = [
   "case-study/puteragani/index.html",
   "case-study/wena/index.html",
   "case-study/fernwood/index.html",
-  "case-study/kerlyfinance/index.html"
+  "case-study/kerlyfinance/index.html",
+  "case-study/emberslice/index.html",
+  "case-study/meridianroasters/index.html"
 ];
 const errors = [];
 

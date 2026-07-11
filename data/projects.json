@@ -103,8 +103,8 @@
       {"tool": "Seobility", "display": "88", "unit": "%", "note": "Page quality 88% · links 90%", "delta": 8, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "90", "unit": "/100", "note": "53 passed · 6 failed", "delta": 5, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ on-page & performance", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 86", "delta": null, "deltaLabel": "mobile +2"},
-      {"tool": "Yoast", "display": "—", "unit": "", "note": "Post-audit review · no numeric score", "delta": null}
+      {"tool": "Semrush", "display": "90", "unit": "%", "note": "Site Health · AI Search 99%", "delta": null},
+      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 86", "delta": null, "deltaLabel": "mobile +2"}
     ],
     "auditsBefore": [
       {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "24 of 28 tests passed"},
@@ -117,6 +117,89 @@
     "categories": ["Technical SEO", "On-Page", "GEO"],
     "showcaseImage": "/assets/images/projects/kerlyfinance-showcase.webp",
     "showcaseAlt": "Kerly Finance market intelligence website preview across desktop, tablet, and mobile devices"
+  },
+  {
+    "slug": "emberslice",
+    "name": "emberslice.com",
+    "siteUrl": "https://emberslice.com/",
+    "caseStudyUrl": "/case-study/emberslice/",
+    "published": "2026-07-11",
+    "dateLabel": "11 Jul 2026",
+    "featured": false,
+    "type": "Local restaurant website",
+    "summary": "Before-and-after SEO optimisation for Ember Slice, lifting Rank Math 90→97, Seobility 88%→92%, SEO Site Checkup 81→86, and SEOptimer B→B+ while improving metadata and audit coverage.",
+    "comparison": true,
+    "dateBeforeLabel": "10 Jul 2026",
+    "dateAfterLabel": "11 Jul 2026",
+    "primaryScore": {
+      "value": 97,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "88%→92%"},
+      {"tool": "SEO Site Checkup", "value": "81→86"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "97", "unit": "/100", "note": "26 of 27 tests passed", "primary": true, "delta": 7, "deltaUnit": ""},
+      {"tool": "Seobility", "display": "92", "unit": "%", "note": "Meta information 100%", "delta": 4, "deltaUnit": "%"},
+      {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "52 passed · 7 failed", "delta": 5, "deltaUnit": ""},
+      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "11 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
+      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score", "delta": 0, "deltaUnit": ""},
+      {"tool": "PageSpeed", "display": "91", "unit": "/100", "note": "Mobile · desktop 100", "delta": null}
+    ],
+    "auditsBefore": [
+      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "23 of 27 tests passed"},
+      {"tool": "Seobility", "display": "88", "unit": "%", "note": "Meta information 90%"},
+      {"tool": "SEO Site Checkup", "display": "81", "unit": "/100", "note": "49 passed · 9 failed"},
+      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "14 recommendations"},
+      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score"}
+    ],
+    "scope": "8-page restaurant site",
+    "categories": ["Local SEO", "On-Page", "Performance"],
+    "showcaseImage": "/assets/images/projects/emberslice-showcase.webp",
+    "showcaseAlt": "Ember Slice coal-fired pizza website homepage with menu navigation and pizza hero image"
+  },
+  {
+    "slug": "meridianroasters",
+    "name": "meridianroasters.com",
+    "siteUrl": "https://meridianroasters.com/",
+    "caseStudyUrl": "/case-study/meridianroasters/",
+    "published": "2026-07-11",
+    "dateLabel": "11 Jul 2026",
+    "featured": false,
+    "type": "E-commerce coffee roaster",
+    "summary": "Same-day SEO optimisation for Meridian Roasters, lifting RankNow Health Score 86.8→94.8, Seobility 57%→88%, SEO Site Checkup 69→82, and SEOptimer C+→B− across a deeper 14-page crawl.",
+    "comparison": true,
+    "dateBeforeLabel": "11 Jul 2026 · 12:59",
+    "dateAfterLabel": "11 Jul 2026 · 15:10",
+    "primaryScore": {
+      "value": 94.8,
+      "max": 100,
+      "tool": "RankNow"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "57%→88%"},
+      {"tool": "SEO Site Checkup", "value": "69→82"}
+    ],
+    "audits": [
+      {"tool": "RankNow", "display": "94.8", "unit": "/100", "note": "14 pages crawled · 11 issues", "primary": true, "delta": 8, "deltaUnit": ""},
+      {"tool": "Seobility", "display": "88", "unit": "%", "note": "524 words · structure 100%", "delta": 31, "deltaUnit": "%"},
+      {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "51 passed · 8 failed", "delta": 13, "deltaUnit": ""},
+      {"tool": "SEOptimer", "display": "B−", "unit": "", "note": "18 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
+      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 98%", "delta": null},
+      {"tool": "PageSpeed", "display": "84", "unit": "/100", "note": "Mobile · desktop 97", "delta": null}
+    ],
+    "auditsBefore": [
+      {"tool": "RankNow", "display": "86.8", "unit": "/100", "note": "2 pages crawled · 4 issues"},
+      {"tool": "Seobility", "display": "57", "unit": "%", "note": "114 words · server 0%"},
+      {"tool": "SEO Site Checkup", "display": "69", "unit": "/100", "note": "46 passed · 14 failed"},
+      {"tool": "SEOptimer", "display": "C+", "unit": "", "note": "19 recommendations"}
+    ],
+    "scope": "14-page e-commerce site",
+    "categories": ["Technical SEO", "On-Page", "Performance"],
+    "showcaseImage": "/assets/images/projects/meridianroasters-showcase.webp",
+    "showcaseAlt": "Meridian Roasters specialty coffee e-commerce website across desktop, tablet, and mobile devices"
   },
   {
     "slug": "wena",

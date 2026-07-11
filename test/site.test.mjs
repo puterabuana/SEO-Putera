@@ -10,7 +10,9 @@ const publicPages = [
   "case-study/puteragani/index.html",
   "case-study/wena/index.html",
   "case-study/fernwood/index.html",
-  "case-study/kerlyfinance/index.html"
+  "case-study/kerlyfinance/index.html",
+  "case-study/emberslice/index.html",
+  "case-study/meridianroasters/index.html"
 ];
 
 async function read(relativePath) {
@@ -74,16 +76,46 @@ test("Wena case study presents local SEO evidence without overstating duplicate 
   assert.match(html, /\.pdf/i);
 });
 
-test("Kerly Finance case study separates paired evidence from after-only checks", async () => {
+test("Kerly Finance case study separates paired evidence from the Semrush snapshot", async () => {
   const html = await read("case-study/kerlyfinance/index.html");
 
   assert.match(html, /Kerly Finance/i);
   assert.match(html, /80%→88%/);
   assert.match(html, /85→90/);
   assert.match(html, /B−→B/);
-  assert.match(html, /wrong domain/i);
-  assert.match(html, /Yoast/i);
+  assert.match(html, /Semrush/i);
+  assert.match(html, /90% Site Health/i);
   assert.match(html, /not establish.*traffic|traffic.*not/i);
+  assert.match(html, /\.pdf/i);
+});
+
+test("Ember Slice case study presents five paired audits and honest limitations", async () => {
+  const html = await read("case-study/emberslice/index.html");
+
+  assert.match(html, /Ember Slice/i);
+  assert.match(html, /90→97/);
+  assert.match(html, /88%→92%/);
+  assert.match(html, /81→86/);
+  assert.match(html, /B→B\+/);
+  assert.match(html, /Google PageSpeed/i);
+  assert.match(html, /91 mobile · 100 desktop/i);
+  assert.match(html, /RankNow did not improve/i);
+  assert.match(html, /not higher search rankings/i);
+  assert.match(html, /ten source files/i);
+  assert.match(html, /\.pdf/i);
+});
+
+test("Meridian Roasters case study preserves the changed crawl scope alongside score gains", async () => {
+  const html = await read("case-study/meridianroasters/index.html");
+
+  assert.match(html, /Meridian Roasters/i);
+  assert.match(html, /86\.8→94\.8/);
+  assert.match(html, /57%→88%/);
+  assert.match(html, /69→82/);
+  assert.match(html, /C\+→B−/);
+  assert.match(html, /coverage expanded from 2 to 14 pages/i);
+  assert.match(html, /do not establish more organic traffic/i);
+  assert.match(html, /nine reports/i);
   assert.match(html, /\.pdf/i);
 });
 
@@ -135,7 +167,42 @@ test("audit evidence and crawl-control files are shipped", async () => {
     "assets/reports/kerlyfinance/seo-site-checkup-after.pdf",
     "assets/reports/kerlyfinance/seoptimer-before.pdf",
     "assets/reports/kerlyfinance/seoptimer-after.pdf",
-    "assets/reports/kerlyfinance/yoast-after.pdf",
+    "assets/reports/kerlyfinance/semrush-after.pdf",
+    "assets/images/projects/emberslice-showcase.webp",
+    "assets/images/audits/emberslice/rankmath-before.webp",
+    "assets/images/audits/emberslice/rankmath-after.webp",
+    "assets/images/audits/emberslice/seobility-before.webp",
+    "assets/images/audits/emberslice/seobility-after.webp",
+    "assets/images/audits/emberslice/seosite-before.webp",
+    "assets/images/audits/emberslice/seosite-after.webp",
+    "assets/images/audits/emberslice/pagespeed-mobile-after.webp",
+    "assets/images/audits/emberslice/pagespeed-desktop-after.webp",
+    "assets/reports/emberslice/rankmath-before.pdf",
+    "assets/reports/emberslice/rankmath-after.pdf",
+    "assets/reports/emberslice/ranknow-before.pdf",
+    "assets/reports/emberslice/ranknow-after.pdf",
+    "assets/reports/emberslice/seobility-before.pdf",
+    "assets/reports/emberslice/seobility-after.pdf",
+    "assets/reports/emberslice/seo-site-checkup-before.pdf",
+    "assets/reports/emberslice/seo-site-checkup-after.pdf",
+    "assets/reports/emberslice/seoptimer-before.pdf",
+    "assets/reports/emberslice/seoptimer-after.pdf",
+    "assets/images/projects/meridianroasters-showcase.webp",
+    "assets/images/audits/meridianroasters/seobility-before.webp",
+    "assets/images/audits/meridianroasters/seobility-after.webp",
+    "assets/images/audits/meridianroasters/seosite-before.webp",
+    "assets/images/audits/meridianroasters/seosite-after.webp",
+    "assets/images/audits/meridianroasters/seoptimer-before.webp",
+    "assets/images/audits/meridianroasters/seoptimer-after.webp",
+    "assets/reports/meridianroasters/ranknow-before.pdf",
+    "assets/reports/meridianroasters/ranknow-after.pdf",
+    "assets/reports/meridianroasters/seobility-before.pdf",
+    "assets/reports/meridianroasters/seobility-after.pdf",
+    "assets/reports/meridianroasters/seo-site-checkup-before.pdf",
+    "assets/reports/meridianroasters/seo-site-checkup-after.pdf",
+    "assets/reports/meridianroasters/seoptimer-before.pdf",
+    "assets/reports/meridianroasters/seoptimer-after.pdf",
+    "assets/reports/meridianroasters/semrush-after.pdf",
     "robots.txt",
     "sitemap.xml"
   ];

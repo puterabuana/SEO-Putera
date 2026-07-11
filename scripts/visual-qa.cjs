@@ -69,6 +69,16 @@ async function main() {
   results.push(await inspectPage(desktopKerly, "/case-study/kerlyfinance/", "seo-putera-kerlyfinance-desktop.png"));
   await desktopKerly.locator("[data-lightbox]").first().click();
   results.push({ interaction: "kerlyfinance lightbox", passed: await desktopKerly.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
+
+  const desktopEmberslice = await desktop.newPage();
+  results.push(await inspectPage(desktopEmberslice, "/case-study/emberslice/", "seo-putera-emberslice-desktop.png"));
+  await desktopEmberslice.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "emberslice lightbox", passed: await desktopEmberslice.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
+
+  const desktopMeridian = await desktop.newPage();
+  results.push(await inspectPage(desktopMeridian, "/case-study/meridianroasters/", "seo-putera-meridianroasters-desktop.png"));
+  await desktopMeridian.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "meridianroasters lightbox", passed: await desktopMeridian.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
   await desktop.close();
 
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
@@ -93,6 +103,12 @@ async function main() {
 
   const mobileKerly = await mobile.newPage();
   results.push(await inspectPage(mobileKerly, "/case-study/kerlyfinance/", "seo-putera-kerlyfinance-mobile.png"));
+
+  const mobileEmberslice = await mobile.newPage();
+  results.push(await inspectPage(mobileEmberslice, "/case-study/emberslice/", "seo-putera-emberslice-mobile.png"));
+
+  const mobileMeridian = await mobile.newPage();
+  results.push(await inspectPage(mobileMeridian, "/case-study/meridianroasters/", "seo-putera-meridianroasters-mobile.png"));
   await mobile.close();
   await browser.close();
 
