@@ -3157,3 +3157,241 @@ button {
     transform: none;
   }
 }
+
+/* ============================================================
+   POLISH LAYER (2026-07-12)
+   Sharper hero hook + clearer scoreboard. Keeps the existing
+   gold identity — only adds hierarchy, selling cues, and life.
+   ============================================================ */
+
+/* --- Hero: before -> after proof pill --- */
+.hero-proof {
+  margin: 28px 0 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  box-shadow: 0 14px 30px -20px rgba(0, 0, 0, 0.5);
+}
+.hero-proof-tag {
+  padding: 5px 9px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero-proof s {
+  color: #b23b2e;
+  text-decoration-thickness: 2px;
+}
+.hero-proof b {
+  position: relative;
+  color: #2c7a4b;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+.hero-proof b::before {
+  content: "\2192";
+  margin-right: 8px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 600;
+}
+.hero-proof-site {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* --- Hero: hire-on line --- */
+.hero-hire {
+  margin: 22px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.01em;
+}
+.hero-hire a {
+  color: var(--ink);
+  font-weight: 700;
+  border-bottom: 1px solid var(--blue);
+  padding-bottom: 1px;
+  transition: color 160ms ease;
+}
+.hero-hire a:hover {
+  color: var(--blue);
+}
+
+/* --- Scoreboard: legend --- */
+.scoreboard-legend {
+  margin: 0 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  align-items: center;
+}
+.lg-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+}
+.lg-primary::before {
+  content: "";
+  width: 13px;
+  height: 13px;
+  flex: 0 0 auto;
+  background: var(--yellow);
+  border: 1px solid #d8b53f;
+}
+.lg-up {
+  color: #2c7a4b;
+}
+
+/* --- Scoreboard: sharper hierarchy so the headline score leads --- */
+.score-chip.is-primary {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+.score-chip.is-primary .score-chip-value {
+  font-size: 48px;
+}
+.score-chip:not(.is-primary) .score-chip-value {
+  font-size: 31px;
+  color: #26262b;
+}
+.score-delta.is-up {
+  color: #2c7a4b;
+}
+
+/* --- A little life on hover --- */
+.scoreboard-row {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.scoreboard-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 44px -26px rgba(0, 0, 0, 0.45);
+}
+.project-card-link {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+.project-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 50px -30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Hero art: real website screenshot + floating score (replaces abstract cards) --- */
+.hero-shot {
+  position: relative;
+  z-index: 2;
+  margin: 46px 0 0 auto;
+  width: 90%;
+  border: 1px solid var(--line);
+  background: #fff;
+  box-shadow: 0 34px 62px -26px rgba(0, 0, 0, 0.45);
+}
+.hero-shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero-scorecard {
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  bottom: 40px;
+  padding: 18px 22px 16px;
+  display: grid;
+  gap: 3px;
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 26px 46px -22px rgba(0, 0, 0, 0.6);
+}
+.hs-tool {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+.hs-value {
+  font-size: 58px;
+  font-weight: 500;
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+.hs-value small {
+  font-size: 0.3em;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #adadb3;
+}
+.hs-note {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #adadb3;
+}
+.hs-verified {
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #3bb26e;
+}
+.hero-scorechip {
+  position: absolute;
+  z-index: 4;
+  top: 22px;
+  right: 0;
+  padding: 11px 15px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 34px -20px rgba(0, 0, 0, 0.45);
+}
+.hero-scorechip small {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.hero-scorechip span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 720px) {
+  .hero-proof {
+    font-size: 15px;
+    width: 100%;
+  }
+  .scoreboard-legend {
+    gap: 8px 16px;
+  }
+  .hero-shot {
+    width: 94%;
+    margin-top: 30px;
+  }
+  .hs-value {
+    font-size: 46px;
+  }
+  .hero-scorecard {
+    bottom: 24px;
+    padding: 14px 16px 12px;
+  }
+}
