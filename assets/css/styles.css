@@ -3164,21 +3164,39 @@ button {
    gold identity — only adds hierarchy, selling cues, and life.
    ============================================================ */
 
-/* --- Hero: before -> after proof pill --- */
+/* --- Hero: before -> after proof pill (clickable evidence) --- */
 .hero-proof {
   margin: 28px 0 0;
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px 12px;
-  padding: 12px 16px;
+  padding: 14px 18px;
   background: #fff;
   border: 1px solid var(--line);
-  border-left: 4px solid var(--blue);
-  font-size: 16px;
+  color: var(--ink);
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: -0.01em;
   box-shadow: 0 14px 30px -20px rgba(0, 0, 0, 0.5);
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+.hero-proof:hover {
+  transform: translateY(-2px);
+  border-color: var(--ink);
+  box-shadow: 0 22px 40px -22px rgba(0, 0, 0, 0.55);
+}
+.hero-proof:hover .hero-proof-cta {
+  color: var(--ink);
+}
+.hero-proof-cta {
+  margin-left: auto;
+  padding-left: 4px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: color 160ms ease;
 }
 .hero-proof-tag {
   padding: 5px 9px;
@@ -3196,7 +3214,7 @@ button {
 .hero-proof b {
   position: relative;
   color: #2c7a4b;
-  font-size: 22px;
+  font-size: 26px;
   letter-spacing: -0.02em;
 }
 .hero-proof b::before {
@@ -3375,10 +3393,111 @@ button {
   letter-spacing: -0.01em;
 }
 
+/* --- Hero: hire-platform pills --- */
+.hero-hire {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.hero-hire a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.hero-hire a::after {
+  content: "\2197";
+  font-size: 11px;
+  color: var(--blue);
+  transition: color 160ms ease;
+}
+.hero-hire a:hover {
+  background: var(--ink);
+  color: #fff;
+}
+.hero-hire a:hover::after {
+  color: var(--yellow);
+}
+
+/* --- Scoreboard: benchmark line for non-technical visitors --- */
+.score-benchmark {
+  margin: 14px 0 0;
+  max-width: 640px;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.score-benchmark::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 9px;
+  background: var(--yellow);
+  border: 1px solid #d8b53f;
+}
+
+/* --- Contact: four-card grid with Upwork as the primary CTA --- */
+.contact-grid-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.contact-grid-four .contact-card {
+  padding: 24px;
+}
+.contact-grid-four .contact-card h3 {
+  font-size: 20px;
+}
+.contact-card-blue span,
+.contact-card-blue p {
+  color: #f7e8c3;
+}
+
+@media (max-width: 1100px) {
+  .contact-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 820px) {
+  .contact-grid-four {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- Calm alternative for the added motion --- */
+@media (prefers-reduced-motion: reduce) {
+  .hero-proof,
+  .hero-hire a,
+  .scoreboard-row,
+  .project-card-link {
+    transition: none;
+  }
+  .hero-proof:hover,
+  .scoreboard-row:hover,
+  .project-card-link:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 720px) {
   .hero-proof {
     font-size: 15px;
     width: 100%;
+  }
+  .hero-proof-tag {
+    flex-basis: 100%;
+    align-self: flex-start;
+    width: fit-content;
+  }
+  .hero-proof b {
+    font-size: 22px;
   }
   .scoreboard-legend {
     gap: 8px 16px;
