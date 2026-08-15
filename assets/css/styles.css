@@ -2925,6 +2925,9 @@ button {
   font-size: 24px;
   font-weight: 600;
   letter-spacing: -0.03em;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .scoreboard-site > div > p {
@@ -2959,7 +2962,7 @@ button {
 
 .scoreboard-scores {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .score-chip-empty {
@@ -3056,7 +3059,7 @@ button {
 
 @media (max-width: 1100px) {
   .scoreboard-scores {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 }
 
@@ -3077,6 +3080,10 @@ button {
 
   .scoreboard-scores {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scoreboard-scores .score-chip.is-primary {
+    grid-column: 1 / -1;
   }
 
   .score-chip-empty {

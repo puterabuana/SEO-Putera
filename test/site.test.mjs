@@ -22,7 +22,7 @@ async function read(relativePath) {
 test("homepage communicates positioning, expertise, portfolio, method, and contact path", async () => {
   const html = await read("index.html");
 
-  assert.match(html, /My SEO work, scored/i);
+  assert.match(html, /Websites I build,.*scored.*verified/i);
   assert.match(html, /95\s*\/\s*100/);
   assert.match(html, /Technical foundations/i);
   assert.match(html, /Structured data/i);

@@ -23,7 +23,7 @@
       {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "53 passed · above 74 avg"},
       {"tool": "Seobility", "display": "87", "unit": "%", "note": "Meta & structure 100%"},
       {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
-      {"tool": "Semrush", "display": "92", "unit": "%", "note": "Site Health · AI Search 93%"},
+      {"tool": "Semrush", "display": "92", "unit": "%", "note": "Site Health · AI Search 93%", "scoreboard": false},
       {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 69"}
     ],
     "scope": "109 pages",
@@ -60,7 +60,7 @@
       {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 94% · links 100%", "delta": 7, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "88", "unit": "/100", "note": "54 passed · above 74 avg", "delta": 1, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ GEO & performance · A on-page", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%", "delta": 0, "deltaUnit": "%"},
+      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%", "delta": 0, "deltaUnit": "%", "scoreboard": false},
       {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 95", "delta": null}
     ],
     "auditsBefore": [
@@ -103,7 +103,7 @@
       {"tool": "Seobility", "display": "88", "unit": "%", "note": "Page quality 88% · links 90%", "delta": 8, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "90", "unit": "/100", "note": "53 passed · 6 failed", "delta": 5, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ on-page & performance", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "90", "unit": "%", "note": "Site Health · AI Search 99%", "delta": null},
+      {"tool": "Semrush", "display": "90", "unit": "%", "note": "Site Health · AI Search 99%", "delta": null, "scoreboard": false},
       {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 86", "delta": null, "deltaLabel": "mobile +2"}
     ],
     "auditsBefore": [
@@ -145,7 +145,7 @@
       {"tool": "Seobility", "display": "92", "unit": "%", "note": "Meta information 100%", "delta": 4, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "52 passed · 7 failed", "delta": 5, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "11 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score", "delta": 0, "deltaUnit": ""},
+      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score", "delta": 0, "deltaUnit": "", "scoreboard": false},
       {"tool": "PageSpeed", "display": "91", "unit": "/100", "note": "Mobile · desktop 100", "delta": null}
     ],
     "auditsBefore": [
@@ -188,7 +188,7 @@
       {"tool": "Seobility", "display": "88", "unit": "%", "note": "524 words · structure 100%", "delta": 31, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "51 passed · 8 failed", "delta": 13, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B−", "unit": "", "note": "18 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 98%", "delta": null},
+      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 98%", "delta": null, "scoreboard": false},
       {"tool": "PageSpeed", "display": "84", "unit": "/100", "note": "Mobile · desktop 97", "delta": null}
     ],
     "auditsBefore": [
@@ -226,7 +226,7 @@
       {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 95%"},
       {"tool": "SEO Site Checkup", "display": "84", "unit": "/100", "note": "52 passed · above 74 avg"},
       {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
-      {"tool": "Semrush", "display": "98", "unit": "%", "note": "Site Health · AI Search 99%"},
+      {"tool": "Semrush", "display": "98", "unit": "%", "note": "Site Health · AI Search 99%", "scoreboard": false},
       {"tool": "PageSpeed", "display": "99", "unit": "/100", "note": "Desktop · mobile 88"}
     ],
     "scope": "Self photo studio",

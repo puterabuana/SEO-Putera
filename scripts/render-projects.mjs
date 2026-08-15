@@ -90,11 +90,15 @@ function renderProject(project, index) {
             </article>`;
 }
 
-/* ---- Audit scoreboard (one row per site, all tool scores exposed) ---- */
+/* ---- Audit scoreboard (one row per site, repeatable core tool scores) ---- */
+function getScoreboardAudits(project) {
+  return (project.audits || []).filter((audit) => audit.scoreboard !== false);
+}
+
 function renderScoreRow(project, index) {
-  const audits = project.audits || [];
+  const audits = getScoreboardAudits(project);
   const isComparison = Boolean(project.comparison);
-  const scoreColumnCount = Math.max(6, ...projects.map((item) => (item.audits || []).length));
+  const scoreColumnCount = Math.max(5, ...projects.map((item) => getScoreboardAudits(item).length));
 
   const chips = audits
     .map((audit) => {
@@ -146,12 +150,9 @@ function renderScoreRow(project, index) {
 /* ---- Aggregate hero stats ---- */
 function renderStats() {
   const siteCount = projects.length;
-  const toolNames = new Set();
+  const scoreCount = Math.max(...projects.map((project) => getScoreboardAudits(project).length));
   const primaries = [];
   for (const project of projects) {
-    for (const audit of project.audits || []) {
-      toolNames.add(audit.tool);
-    }
     if (project.primaryScore?.value) primaries.push(project.primaryScore.value);
   }
   const best = primaries.length ? Math.max(...primaries) : 0;
@@ -159,7 +160,7 @@ function renderStats() {
 
   const stats = [
     { value: String(siteCount), label: "Live sites audited" },
-    { value: String(toolNames.size), label: "Independent audit tools" },
+    { value: String(scoreCount), label: "Core scores per site" },
     { value: `${avg}`, unit: "/100", label: "Average primary audit score" },
     { value: `${best}`, unit: "/100", label: "Top verified score" }
   ];
