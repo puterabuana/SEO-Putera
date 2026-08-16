@@ -662,9 +662,9 @@
       },
       {
         "tool": "PageSpeed",
-        "display": "—",
-        "unit": "",
-        "note": "No source report supplied"
+        "display": "88",
+        "unit": "/100",
+        "note": "Mobile 88 · desktop 99"
       }
     ],
     "scope": "Supplement brand website",

@@ -145,7 +145,7 @@ test("Biotek Farmasi presents paired audit evidence without inventing a PageSpee
   assert.match(html, /\.pdf/i);
 });
 
-test("Liemoro presents four paired audit reports and discloses the PageSpeed gap", async () => {
+test("Liemoro presents four paired audit reports and a separately-run PageSpeed check", async () => {
   const html = await read("case-study/liemoro/index.html");
 
   assert.match(html, /Liemoro/i);
@@ -154,7 +154,7 @@ test("Liemoro presents four paired audit reports and discloses the PageSpeed gap
   assert.match(html, /84\s*→\s*89/);
   assert.match(html, /C\+\s*→\s*B/);
   assert.match(html, /PageSpeed/i);
-  assert.match(html, /No source report supplied/i);
+  assert.match(html, /Mobile 88 · desktop 99/i);
   assert.match(html, /higher rankings/i);
   assert.match(html, /\.pdf/i);
 });
