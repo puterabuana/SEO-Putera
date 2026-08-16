@@ -15,16 +15,48 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "SEO Site Checkup", "value": "86/100"},
-      {"tool": "Seobility", "value": "87%"}
+      { "tool": "SEO Site Checkup", "value": "86/100" },
+      { "tool": "Seobility", "value": "87%" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "95", "unit": "/100", "note": "26 of 28 tests passed", "primary": true},
-      {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "53 passed · above 74 avg"},
-      {"tool": "Seobility", "display": "87", "unit": "%", "note": "Meta & structure 100%"},
-      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
-      {"tool": "Semrush", "display": "92", "unit": "%", "note": "Site Health · AI Search 93%", "scoreboard": false},
-      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 69"}
+      {
+        "tool": "Rank Math",
+        "display": "95",
+        "unit": "/100",
+        "note": "26 of 28 tests passed",
+        "primary": true
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "86",
+        "unit": "/100",
+        "note": "53 passed · above 74 avg"
+      },
+      {
+        "tool": "Seobility",
+        "display": "87",
+        "unit": "%",
+        "note": "Meta & structure 100%"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B+",
+        "unit": "",
+        "note": "A+ on-page, GEO & performance"
+      },
+      {
+        "tool": "Semrush",
+        "display": "92",
+        "unit": "%",
+        "note": "Site Health · AI Search 93%",
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "98",
+        "unit": "/100",
+        "note": "Desktop · mobile 69"
+      }
     ],
     "scope": "109 pages",
     "categories": ["Technical SEO", "On-Page", "Schema"],
@@ -52,24 +84,97 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "83%→90%"},
-      {"tool": "SEOptimer", "value": "B–→B"}
+      { "tool": "Seobility", "value": "83%→90%" },
+      { "tool": "SEOptimer", "value": "B–→B" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "97", "unit": "/100", "note": "27 of 28 passed", "primary": true, "delta": 3, "deltaUnit": ""},
-      {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 94% · links 100%", "delta": 7, "deltaUnit": "%"},
-      {"tool": "SEO Site Checkup", "display": "88", "unit": "/100", "note": "54 passed · above 74 avg", "delta": 1, "deltaUnit": ""},
-      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ GEO & performance · A on-page", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%", "delta": 0, "deltaUnit": "%", "scoreboard": false},
-      {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 95", "delta": null}
+      {
+        "tool": "Rank Math",
+        "display": "97",
+        "unit": "/100",
+        "note": "27 of 28 passed",
+        "primary": true,
+        "delta": 3,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "90",
+        "unit": "%",
+        "note": "Page quality 94% · links 100%",
+        "delta": 7,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "88",
+        "unit": "/100",
+        "note": "54 passed · above 74 avg",
+        "delta": 1,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B",
+        "unit": "",
+        "note": "A+ GEO & performance · A on-page",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "Semrush",
+        "display": "87",
+        "unit": "%",
+        "note": "Site Health · AI Search 88%",
+        "delta": 0,
+        "deltaUnit": "%",
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "100",
+        "unit": "/100",
+        "note": "Desktop · mobile 95",
+        "delta": null
+      }
     ],
     "auditsBefore": [
-      {"tool": "Rank Math", "display": "94", "unit": "/100", "note": "26 of 28 passed"},
-      {"tool": "Seobility", "display": "83", "unit": "%", "note": "Page quality 75% · links 65%"},
-      {"tool": "SEO Site Checkup", "display": "87", "unit": "/100", "note": "54 passed · 6 failed"},
-      {"tool": "SEOptimer", "display": "B-", "unit": "", "note": "A- on-page · C+ GEO"},
-      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 88%"},
-      {"tool": "PageSpeed", "display": "100", "unit": "/100", "note": "Desktop · mobile 97"}
+      {
+        "tool": "Rank Math",
+        "display": "94",
+        "unit": "/100",
+        "note": "26 of 28 passed"
+      },
+      {
+        "tool": "Seobility",
+        "display": "83",
+        "unit": "%",
+        "note": "Page quality 75% · links 65%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "87",
+        "unit": "/100",
+        "note": "54 passed · 6 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B-",
+        "unit": "",
+        "note": "A- on-page · C+ GEO"
+      },
+      {
+        "tool": "Semrush",
+        "display": "87",
+        "unit": "%",
+        "note": "Site Health · AI Search 88%"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "100",
+        "unit": "/100",
+        "note": "Desktop · mobile 97"
+      }
     ],
     "scope": "18 pages",
     "categories": ["Local SEO", "On-Page", "GEO"],
@@ -95,23 +200,91 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "80%→88%"},
-      {"tool": "SEO Site Checkup", "value": "85→90"}
+      { "tool": "Seobility", "value": "80%→88%" },
+      { "tool": "SEO Site Checkup", "value": "85→90" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "24 of 28 tests passed", "primary": true, "delta": 0, "deltaUnit": ""},
-      {"tool": "Seobility", "display": "88", "unit": "%", "note": "Page quality 88% · links 90%", "delta": 8, "deltaUnit": "%"},
-      {"tool": "SEO Site Checkup", "display": "90", "unit": "/100", "note": "53 passed · 6 failed", "delta": 5, "deltaUnit": ""},
-      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "A+ on-page & performance", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "90", "unit": "%", "note": "Site Health · AI Search 99%", "delta": null, "scoreboard": false},
-      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 86", "delta": null, "deltaLabel": "mobile +2"}
+      {
+        "tool": "Rank Math",
+        "display": "90",
+        "unit": "/100",
+        "note": "24 of 28 tests passed",
+        "primary": true,
+        "delta": 0,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "88",
+        "unit": "%",
+        "note": "Page quality 88% · links 90%",
+        "delta": 8,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "90",
+        "unit": "/100",
+        "note": "53 passed · 6 failed",
+        "delta": 5,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B",
+        "unit": "",
+        "note": "A+ on-page & performance",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "Semrush",
+        "display": "90",
+        "unit": "%",
+        "note": "Site Health · AI Search 99%",
+        "delta": null,
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "98",
+        "unit": "/100",
+        "note": "Desktop · mobile 86",
+        "delta": null,
+        "deltaLabel": "mobile +2"
+      }
     ],
     "auditsBefore": [
-      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "24 of 28 tests passed"},
-      {"tool": "Seobility", "display": "80", "unit": "%", "note": "Page quality 60% · links 65%"},
-      {"tool": "SEO Site Checkup", "display": "85", "unit": "/100", "note": "50 passed · 10 failed"},
-      {"tool": "SEOptimer", "display": "B-", "unit": "", "note": "19 recommendations"},
-      {"tool": "PageSpeed", "display": "98", "unit": "/100", "note": "Desktop · mobile 84"}
+      {
+        "tool": "Rank Math",
+        "display": "90",
+        "unit": "/100",
+        "note": "24 of 28 tests passed"
+      },
+      {
+        "tool": "Seobility",
+        "display": "80",
+        "unit": "%",
+        "note": "Page quality 60% · links 65%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "85",
+        "unit": "/100",
+        "note": "50 passed · 10 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B-",
+        "unit": "",
+        "note": "19 recommendations"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "98",
+        "unit": "/100",
+        "note": "Desktop · mobile 84"
+      }
     ],
     "scope": "Finance publication",
     "categories": ["Technical SEO", "On-Page", "GEO"],
@@ -137,23 +310,91 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "88%→92%"},
-      {"tool": "SEO Site Checkup", "value": "81→86"}
+      { "tool": "Seobility", "value": "88%→92%" },
+      { "tool": "SEO Site Checkup", "value": "81→86" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "97", "unit": "/100", "note": "26 of 27 tests passed", "primary": true, "delta": 7, "deltaUnit": ""},
-      {"tool": "Seobility", "display": "92", "unit": "%", "note": "Meta information 100%", "delta": 4, "deltaUnit": "%"},
-      {"tool": "SEO Site Checkup", "display": "86", "unit": "/100", "note": "52 passed · 7 failed", "delta": 5, "deltaUnit": ""},
-      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "11 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score", "delta": 0, "deltaUnit": "", "scoreboard": false},
-      {"tool": "PageSpeed", "display": "91", "unit": "/100", "note": "Mobile · desktop 100", "delta": null}
+      {
+        "tool": "Rank Math",
+        "display": "97",
+        "unit": "/100",
+        "note": "26 of 27 tests passed",
+        "primary": true,
+        "delta": 7,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "92",
+        "unit": "%",
+        "note": "Meta information 100%",
+        "delta": 4,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "86",
+        "unit": "/100",
+        "note": "52 passed · 7 failed",
+        "delta": 5,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B+",
+        "unit": "",
+        "note": "11 recommendations remaining",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "RankNow",
+        "display": "98",
+        "unit": "/100",
+        "note": "Completed Site Health Score",
+        "delta": 0,
+        "deltaUnit": "",
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "91",
+        "unit": "/100",
+        "note": "Mobile · desktop 100",
+        "delta": null
+      }
     ],
     "auditsBefore": [
-      {"tool": "Rank Math", "display": "90", "unit": "/100", "note": "23 of 27 tests passed"},
-      {"tool": "Seobility", "display": "88", "unit": "%", "note": "Meta information 90%"},
-      {"tool": "SEO Site Checkup", "display": "81", "unit": "/100", "note": "49 passed · 9 failed"},
-      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "14 recommendations"},
-      {"tool": "RankNow", "display": "98", "unit": "/100", "note": "Completed Site Health Score"}
+      {
+        "tool": "Rank Math",
+        "display": "90",
+        "unit": "/100",
+        "note": "23 of 27 tests passed"
+      },
+      {
+        "tool": "Seobility",
+        "display": "88",
+        "unit": "%",
+        "note": "Meta information 90%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "81",
+        "unit": "/100",
+        "note": "49 passed · 9 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B",
+        "unit": "",
+        "note": "14 recommendations"
+      },
+      {
+        "tool": "RankNow",
+        "display": "98",
+        "unit": "/100",
+        "note": "Completed Site Health Score"
+      }
     ],
     "scope": "8-page restaurant site",
     "categories": ["Local SEO", "On-Page", "Performance"],
@@ -180,22 +421,84 @@
       "tool": "RankNow"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "57%→88%"},
-      {"tool": "SEO Site Checkup", "value": "69→82"}
+      { "tool": "Seobility", "value": "57%→88%" },
+      { "tool": "SEO Site Checkup", "value": "69→82" }
     ],
     "audits": [
-      {"tool": "RankNow", "display": "94.8", "unit": "/100", "note": "14 pages crawled · 11 issues", "primary": true, "delta": 8, "deltaUnit": ""},
-      {"tool": "Seobility", "display": "88", "unit": "%", "note": "524 words · structure 100%", "delta": 31, "deltaUnit": "%"},
-      {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "51 passed · 8 failed", "delta": 13, "deltaUnit": ""},
-      {"tool": "SEOptimer", "display": "B−", "unit": "", "note": "18 recommendations remaining", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "Semrush", "display": "87", "unit": "%", "note": "Site Health · AI Search 98%", "delta": null, "scoreboard": false},
-      {"tool": "PageSpeed", "display": "84", "unit": "/100", "note": "Mobile · desktop 97", "delta": null}
+      {
+        "tool": "RankNow",
+        "display": "94.8",
+        "unit": "/100",
+        "note": "14 pages crawled · 11 issues",
+        "primary": true,
+        "delta": 8,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "88",
+        "unit": "%",
+        "note": "524 words · structure 100%",
+        "delta": 31,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "82",
+        "unit": "/100",
+        "note": "51 passed · 8 failed",
+        "delta": 13,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B−",
+        "unit": "",
+        "note": "18 recommendations remaining",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "Semrush",
+        "display": "87",
+        "unit": "%",
+        "note": "Site Health · AI Search 98%",
+        "delta": null,
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "84",
+        "unit": "/100",
+        "note": "Mobile · desktop 97",
+        "delta": null
+      }
     ],
     "auditsBefore": [
-      {"tool": "RankNow", "display": "86.8", "unit": "/100", "note": "2 pages crawled · 4 issues"},
-      {"tool": "Seobility", "display": "57", "unit": "%", "note": "114 words · server 0%"},
-      {"tool": "SEO Site Checkup", "display": "69", "unit": "/100", "note": "46 passed · 14 failed"},
-      {"tool": "SEOptimer", "display": "C+", "unit": "", "note": "19 recommendations"}
+      {
+        "tool": "RankNow",
+        "display": "86.8",
+        "unit": "/100",
+        "note": "2 pages crawled · 4 issues"
+      },
+      {
+        "tool": "Seobility",
+        "display": "57",
+        "unit": "%",
+        "note": "114 words · server 0%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "69",
+        "unit": "/100",
+        "note": "46 passed · 14 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "C+",
+        "unit": "",
+        "note": "19 recommendations"
+      }
     ],
     "scope": "14-page e-commerce site",
     "categories": ["Technical SEO", "On-Page", "Performance"],
@@ -218,16 +521,48 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "90%"},
-      {"tool": "SEOptimer", "value": "B+"}
+      { "tool": "Seobility", "value": "90%" },
+      { "tool": "SEOptimer", "value": "B+" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "88", "unit": "/100", "note": "23 of 27 tests passed", "primary": true},
-      {"tool": "Seobility", "display": "90", "unit": "%", "note": "Page quality 95%"},
-      {"tool": "SEO Site Checkup", "display": "84", "unit": "/100", "note": "52 passed · above 74 avg"},
-      {"tool": "SEOptimer", "display": "B+", "unit": "", "note": "A+ on-page, GEO & performance"},
-      {"tool": "Semrush", "display": "98", "unit": "%", "note": "Site Health · AI Search 99%", "scoreboard": false},
-      {"tool": "PageSpeed", "display": "99", "unit": "/100", "note": "Desktop · mobile 88"}
+      {
+        "tool": "Rank Math",
+        "display": "88",
+        "unit": "/100",
+        "note": "23 of 27 tests passed",
+        "primary": true
+      },
+      {
+        "tool": "Seobility",
+        "display": "90",
+        "unit": "%",
+        "note": "Page quality 95%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "84",
+        "unit": "/100",
+        "note": "52 passed · above 74 avg"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B+",
+        "unit": "",
+        "note": "A+ on-page, GEO & performance"
+      },
+      {
+        "tool": "Semrush",
+        "display": "98",
+        "unit": "%",
+        "note": "Site Health · AI Search 99%",
+        "scoreboard": false
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "99",
+        "unit": "/100",
+        "note": "Desktop · mobile 88"
+      }
     ],
     "scope": "Self photo studio",
     "categories": ["Local SEO", "On-Page", "Performance"],
@@ -256,27 +591,185 @@
       "tool": "Rank Math"
     },
     "supportingScores": [
-      {"tool": "Seobility", "value": "58%→100%"},
-      {"tool": "SEO Site Checkup", "value": "66→82"}
+      { "tool": "Seobility", "value": "58%→100%" },
+      { "tool": "SEO Site Checkup", "value": "66→82" }
     ],
     "audits": [
-      {"tool": "Rank Math", "display": "98", "unit": "/100", "note": "27 of 28 tests passed", "primary": true, "delta": 32, "deltaUnit": ""},
-      {"tool": "Seobility", "display": "100", "unit": "%", "note": "Page structure · links 100%", "delta": 42, "deltaUnit": "%"},
-      {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "49 passed · 11 failed", "delta": 16, "deltaUnit": ""},
-      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "15 recommendations · links F", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "PageSpeed", "display": "93", "unit": "/100", "note": "Mobile · desktop unavailable"}
+      {
+        "tool": "Rank Math",
+        "display": "98",
+        "unit": "/100",
+        "note": "27 of 28 tests passed",
+        "primary": true,
+        "delta": 32,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "100",
+        "unit": "%",
+        "note": "Page structure · links 100%",
+        "delta": 42,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "82",
+        "unit": "/100",
+        "note": "49 passed · 11 failed",
+        "delta": 16,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B",
+        "unit": "",
+        "note": "15 recommendations · links F",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "93",
+        "unit": "/100",
+        "note": "Mobile · desktop unavailable"
+      }
     ],
     "auditsBefore": [
-      {"tool": "Rank Math", "display": "66", "unit": "/100", "note": "18 of 28 tests passed"},
-      {"tool": "Seobility", "display": "58", "unit": "%", "note": "Page quality 48% · links 0%"},
-      {"tool": "SEO Site Checkup", "display": "66", "unit": "/100", "note": "42 passed · 17 failed"},
-      {"tool": "SEOptimer", "display": "C", "unit": "", "note": "22 recommendations · links F"},
-      {"tool": "PageSpeed", "display": "—", "unit": "", "note": "No source report supplied"}
+      {
+        "tool": "Rank Math",
+        "display": "66",
+        "unit": "/100",
+        "note": "18 of 28 tests passed"
+      },
+      {
+        "tool": "Seobility",
+        "display": "58",
+        "unit": "%",
+        "note": "Page quality 48% · links 0%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "66",
+        "unit": "/100",
+        "note": "42 passed · 17 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "C",
+        "unit": "",
+        "note": "22 recommendations · links F"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "—",
+        "unit": "",
+        "note": "No source report supplied"
+      }
     ],
     "scope": "Supplement brand website",
     "categories": ["Technical SEO", "On-Page", "Schema"],
     "showcaseImage": "/assets/images/projects/biotekfarmasi-showcase.png",
     "showcaseVersion": "20260816-2",
     "showcaseAlt": "Biotek Farmasi website preview across desktop, tablet, and mobile devices"
+  },
+  {
+    "slug": "liemoro",
+    "name": "liemoro.com",
+    "siteUrl": "https://liemoro.com/",
+    "caseStudyUrl": "/case-study/liemoro/",
+    "published": "2026-08-17",
+    "dateLabel": "17 Aug 2026",
+    "featured": false,
+    "type": "Yoga studio website",
+    "summary": "Before-and-after SEO optimisation for Liemoro, lifting Rank Math 65→89, Seobility 67%→84%, SEO Site Checkup 84→89, and SEOptimer C+→B through richer on-page content, headings, and internal links.",
+    "comparison": true,
+    "comparisonLabel": "Baseline → Optimised",
+    "dateBeforeLabel": "16 Aug 2026",
+    "dateAfterLabel": "16 Aug 2026",
+    "primaryScore": {
+      "value": 89,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      { "tool": "Seobility", "value": "67%→84%" },
+      { "tool": "SEO Site Checkup", "value": "84→89" }
+    ],
+    "audits": [
+      {
+        "tool": "Rank Math",
+        "display": "89",
+        "unit": "/100",
+        "note": "25 of 28 tests passed",
+        "primary": true,
+        "delta": 24,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "Seobility",
+        "display": "84",
+        "unit": "%",
+        "note": "1,047 words · 19 internal links",
+        "delta": 17,
+        "deltaUnit": "%"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "89",
+        "unit": "/100",
+        "note": "53 passed · 6 failed",
+        "delta": 5,
+        "deltaUnit": ""
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "B",
+        "unit": "",
+        "note": "20 recommendations",
+        "delta": null,
+        "deltaLabel": "↑ grade"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "—",
+        "unit": "",
+        "note": "No source report supplied"
+      }
+    ],
+    "auditsBefore": [
+      {
+        "tool": "Rank Math",
+        "display": "65",
+        "unit": "/100",
+        "note": "19 of 28 tests passed"
+      },
+      {
+        "tool": "Seobility",
+        "display": "67",
+        "unit": "%",
+        "note": "0 words · 0 internal links"
+      },
+      {
+        "tool": "SEO Site Checkup",
+        "display": "84",
+        "unit": "/100",
+        "note": "50 passed · 10 failed"
+      },
+      {
+        "tool": "SEOptimer",
+        "display": "C+",
+        "unit": "",
+        "note": "22 recommendations"
+      },
+      {
+        "tool": "PageSpeed",
+        "display": "—",
+        "unit": "",
+        "note": "No source report supplied"
+      }
+    ],
+    "scope": "Yoga studio website",
+    "categories": ["Technical SEO", "On-Page", "Local SEO"]
   }
 ]

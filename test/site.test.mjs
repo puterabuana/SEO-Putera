@@ -13,7 +13,8 @@ const publicPages = [
   "case-study/kerlyfinance/index.html",
   "case-study/emberslice/index.html",
   "case-study/meridianroasters/index.html",
-  "case-study/biotekfarmasi/index.html"
+  "case-study/biotekfarmasi/index.html",
+  "case-study/liemoro/index.html",
 ];
 
 async function read(relativePath) {
@@ -37,15 +38,24 @@ test("project archive is generated from the shared project data", async () => {
   const home = await read("index.html");
   const archive = await read("projects/index.html");
 
-  assert.ok(projects.length > 0, "project data should contain at least one real project");
+  assert.ok(
+    projects.length > 0,
+    "project data should contain at least one real project",
+  );
   for (const project of projects) {
     assert.match(home, new RegExp(project.name.replaceAll(".", "\\."), "i"));
     assert.match(archive, new RegExp(project.name.replaceAll(".", "\\."), "i"));
     assert.match(home, new RegExp(project.caseStudyUrl.replaceAll("/", "\\/")));
   }
 
-  assert.equal((home.match(/data-project-card/g) || []).length, projects.length);
-  assert.equal((archive.match(/data-project-card/g) || []).length, projects.length);
+  assert.equal(
+    (home.match(/data-project-card/g) || []).length,
+    projects.length,
+  );
+  assert.equal(
+    (archive.match(/data-project-card/g) || []).length,
+    projects.length,
+  );
 });
 
 test("case study presents evidence with source labels and honest limitations", async () => {
@@ -135,13 +145,30 @@ test("Biotek Farmasi presents paired audit evidence without inventing a PageSpee
   assert.match(html, /\.pdf/i);
 });
 
+test("Liemoro presents four paired audit reports and discloses the PageSpeed gap", async () => {
+  const html = await read("case-study/liemoro/index.html");
+
+  assert.match(html, /Liemoro/i);
+  assert.match(html, /65\s*→\s*89/);
+  assert.match(html, /67%\s*→\s*84%/);
+  assert.match(html, /84\s*→\s*89/);
+  assert.match(html, /C\+\s*→\s*B/);
+  assert.match(html, /PageSpeed/i);
+  assert.match(html, /No source report supplied/i);
+  assert.match(html, /higher rankings/i);
+  assert.match(html, /\.pdf/i);
+});
+
 test("every public page has core search and social metadata", async () => {
   for (const path of publicPages) {
     const html = await read(path);
 
     assert.match(html, /<html[^>]+lang="en"/i);
     assert.match(html, /<title>[^<]{20,65}<\/title>/i);
-    assert.match(html, /<meta[^>]+name="description"[^>]+content="[^"]{100,170}"/i);
+    assert.match(
+      html,
+      /<meta[^>]+name="description"[^>]+content="[^"]{100,170}"/i,
+    );
     assert.match(html, /<link[^>]+rel="canonical"/i);
     assert.match(html, /<meta[^>]+property="og:title"/i);
     assert.match(html, /<meta[^>]+name="twitter:card"/i);
@@ -244,8 +271,24 @@ test("audit evidence and crawl-control files are shipped", async () => {
     "assets/reports/biotekfarmasi/seobility-after.pdf",
     "assets/reports/biotekfarmasi/seo-site-checkup-after.pdf",
     "assets/reports/biotekfarmasi/seoptimer-after.pdf",
+    "assets/images/audits/liemoro/rankmath-baseline.png",
+    "assets/images/audits/liemoro/rankmath-after.png",
+    "assets/images/audits/liemoro/seobility-baseline.png",
+    "assets/images/audits/liemoro/seobility-after.png",
+    "assets/images/audits/liemoro/seo-site-checkup-baseline.png",
+    "assets/images/audits/liemoro/seo-site-checkup-after.png",
+    "assets/images/audits/liemoro/seoptimer-baseline.png",
+    "assets/images/audits/liemoro/seoptimer-after.png",
+    "assets/reports/liemoro/rankmath-baseline.pdf",
+    "assets/reports/liemoro/rankmath-after.pdf",
+    "assets/reports/liemoro/seobility-baseline.pdf",
+    "assets/reports/liemoro/seobility-after.pdf",
+    "assets/reports/liemoro/seo-site-checkup-baseline.pdf",
+    "assets/reports/liemoro/seo-site-checkup-after.pdf",
+    "assets/reports/liemoro/seoptimer-baseline.pdf",
+    "assets/reports/liemoro/seoptimer-after.pdf",
     "robots.txt",
-    "sitemap.xml"
+    "sitemap.xml",
   ];
 
   for (const path of files) {

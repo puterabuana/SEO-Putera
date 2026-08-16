@@ -11,7 +11,8 @@ const publicPages = [
   "case-study/kerlyfinance/index.html",
   "case-study/emberslice/index.html",
   "case-study/meridianroasters/index.html",
-  "case-study/biotekfarmasi/index.html"
+  "case-study/biotekfarmasi/index.html",
+  "case-study/liemoro/index.html"
 ];
 const errors = [];
 
