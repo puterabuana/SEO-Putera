@@ -127,8 +127,9 @@ function renderScoreRow(project, index) {
   const emptyChips = Array.from({ length: Math.max(0, scoreColumnCount - audits.length) }, () => `
                 <div class="score-chip score-chip-empty" aria-hidden="true"></div>`).join("");
 
+  const comparisonLabel = project.comparisonLabel || "Before → After";
   const dateHtml = isComparison
-    ? `Audited ${escapeHtml(project.dateBeforeLabel)} → ${escapeHtml(project.dateAfterLabel)} <span class="scoreboard-badge-comparison">Before → After</span>`
+    ? `Audited ${escapeHtml(project.dateBeforeLabel)} → ${escapeHtml(project.dateAfterLabel)} <span class="scoreboard-badge-comparison">${escapeHtml(comparisonLabel)}</span>`
     : `Audited ${escapeHtml(project.dateLabel)}`;
 
   return `

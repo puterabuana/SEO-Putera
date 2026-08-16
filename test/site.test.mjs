@@ -12,7 +12,8 @@ const publicPages = [
   "case-study/fernwood/index.html",
   "case-study/kerlyfinance/index.html",
   "case-study/emberslice/index.html",
-  "case-study/meridianroasters/index.html"
+  "case-study/meridianroasters/index.html",
+  "case-study/biotekfarmasi/index.html"
 ];
 
 async function read(relativePath) {
@@ -119,6 +120,20 @@ test("Meridian Roasters case study preserves the changed crawl scope alongside s
   assert.match(html, /\.pdf/i);
 });
 
+test("Biotek Farmasi presents paired audit evidence without inventing a PageSpeed score", async () => {
+  const html = await read("case-study/biotekfarmasi/index.html");
+
+  assert.match(html, /Biotek Farmasi/i);
+  assert.match(html, /66\s*→\s*98/);
+  assert.match(html, /58%\s*→\s*100%/);
+  assert.match(html, /66\s*→\s*82/);
+  assert.match(html, /C\s*→\s*B/);
+  assert.match(html, /SEOptimer/i);
+  assert.match(html, /No PageSpeed report was supplied/i);
+  assert.match(html, /not higher organic rankings/i);
+  assert.match(html, /\.pdf/i);
+});
+
 test("every public page has core search and social metadata", async () => {
   for (const path of publicPages) {
     const html = await read(path);
@@ -203,6 +218,31 @@ test("audit evidence and crawl-control files are shipped", async () => {
     "assets/reports/meridianroasters/seoptimer-before.pdf",
     "assets/reports/meridianroasters/seoptimer-after.pdf",
     "assets/reports/meridianroasters/semrush-after.pdf",
+    "assets/images/projects/biotekfarmasi-showcase.png",
+    "assets/images/audits/biotekfarmasi/rankmath-baseline-1.png",
+    "assets/images/audits/biotekfarmasi/seobility-baseline-01.png",
+    "assets/images/audits/biotekfarmasi/seo-site-checkup-baseline-01.png",
+    "assets/images/audits/biotekfarmasi/seoptimer-baseline-01.png",
+    "assets/images/audits/biotekfarmasi/rankmath-baseline-1-thumb.png",
+    "assets/images/audits/biotekfarmasi/seobility-baseline-01-thumb.png",
+    "assets/images/audits/biotekfarmasi/seo-site-checkup-baseline-01-thumb.png",
+    "assets/images/audits/biotekfarmasi/seoptimer-baseline-01-thumb.png",
+    "assets/reports/biotekfarmasi/rankmath-baseline.pdf",
+    "assets/reports/biotekfarmasi/seobility-baseline.pdf",
+    "assets/reports/biotekfarmasi/seo-site-checkup-baseline.pdf",
+    "assets/reports/biotekfarmasi/seoptimer-baseline.pdf",
+    "assets/images/audits/biotekfarmasi/rankmath-after-1.png",
+    "assets/images/audits/biotekfarmasi/seobility-after-01.png",
+    "assets/images/audits/biotekfarmasi/seo-site-checkup-after-01.png",
+    "assets/images/audits/biotekfarmasi/seoptimer-after-01.png",
+    "assets/images/audits/biotekfarmasi/rankmath-after-1-thumb.png",
+    "assets/images/audits/biotekfarmasi/seobility-after-01-thumb.png",
+    "assets/images/audits/biotekfarmasi/seo-site-checkup-after-01-thumb.png",
+    "assets/images/audits/biotekfarmasi/seoptimer-after-01-thumb.png",
+    "assets/reports/biotekfarmasi/rankmath-after.pdf",
+    "assets/reports/biotekfarmasi/seobility-after.pdf",
+    "assets/reports/biotekfarmasi/seo-site-checkup-after.pdf",
+    "assets/reports/biotekfarmasi/seoptimer-after.pdf",
     "robots.txt",
     "sitemap.xml"
   ];

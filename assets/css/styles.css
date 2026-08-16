@@ -2121,6 +2121,12 @@ button {
   aspect-ratio: 2 / 1;
 }
 
+/* Full-page PDF captures stay legible in portfolio thumbnails. */
+.evidence-gallery-document .evidence-shot img {
+  object-fit: cover;
+  object-position: top;
+}
+
 .evidence-shot:hover img {
   filter: saturate(1.1);
 }

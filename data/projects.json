@@ -235,5 +235,48 @@
     "showcaseAlt": "Wena Self Photo Studio website preview across desktop, tablet, and mobile devices",
     "image": "/assets/images/audits/wena-rankmath-92.webp",
     "imageAlt": "Rank Math audit for Wena.my.id showing an SEO score of 88 out of 100"
+  },
+  {
+    "slug": "biotekfarmasi",
+    "name": "biotekfarmasi.com",
+    "siteUrl": "https://biotekfarmasi.com/",
+    "caseStudyUrl": "/case-study/biotekfarmasi/",
+    "published": "2026-08-16",
+    "dateLabel": "16 Aug 2026",
+    "featured": false,
+    "type": "Supplement brand website",
+    "summary": "Before-and-after SEO optimisation for Biotek Farmasi, lifting Rank Math 66→98, Seobility 58%→100%, SEO Site Checkup 66→82, and SEOptimer C→B while reducing outstanding checker issues.",
+    "comparison": true,
+    "comparisonLabel": "Baseline → Optimised",
+    "dateBeforeLabel": "15 Aug 2026",
+    "dateAfterLabel": "16 Aug 2026",
+    "primaryScore": {
+      "value": 98,
+      "max": 100,
+      "tool": "Rank Math"
+    },
+    "supportingScores": [
+      {"tool": "Seobility", "value": "58%→100%"},
+      {"tool": "SEO Site Checkup", "value": "66→82"}
+    ],
+    "audits": [
+      {"tool": "Rank Math", "display": "98", "unit": "/100", "note": "27 of 28 tests passed", "primary": true, "delta": 32, "deltaUnit": ""},
+      {"tool": "Seobility", "display": "100", "unit": "%", "note": "Page structure · links 100%", "delta": 42, "deltaUnit": "%"},
+      {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "49 passed · 11 failed", "delta": 16, "deltaUnit": ""},
+      {"tool": "SEOptimer", "display": "B", "unit": "", "note": "15 recommendations · links F", "delta": null, "deltaLabel": "↑ grade"},
+      {"tool": "PageSpeed", "display": "—", "unit": "", "note": "No paired report supplied"}
+    ],
+    "auditsBefore": [
+      {"tool": "Rank Math", "display": "66", "unit": "/100", "note": "18 of 28 tests passed"},
+      {"tool": "Seobility", "display": "58", "unit": "%", "note": "Page quality 48% · links 0%"},
+      {"tool": "SEO Site Checkup", "display": "66", "unit": "/100", "note": "42 passed · 17 failed"},
+      {"tool": "SEOptimer", "display": "C", "unit": "", "note": "22 recommendations · links F"},
+      {"tool": "PageSpeed", "display": "—", "unit": "", "note": "No source report supplied"}
+    ],
+    "scope": "Supplement brand website",
+    "categories": ["Technical SEO", "On-Page", "Schema"],
+    "showcaseImage": "/assets/images/projects/biotekfarmasi-showcase.png",
+    "showcaseVersion": "20260815",
+    "showcaseAlt": "Biotek Farmasi supplement products, including Viradef, Dialance, K-Fix, and Regimun"
   }
 ]

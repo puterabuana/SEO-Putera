@@ -10,7 +10,8 @@ const publicPages = [
   "case-study/fernwood/index.html",
   "case-study/kerlyfinance/index.html",
   "case-study/emberslice/index.html",
-  "case-study/meridianroasters/index.html"
+  "case-study/meridianroasters/index.html",
+  "case-study/biotekfarmasi/index.html"
 ];
 const errors = [];
 

@@ -45,8 +45,9 @@ async function main() {
 
   const desktopArchive = await desktop.newPage();
   results.push(await inspectPage(desktopArchive, "/projects/", "seo-putera-projects-desktop.png"));
+  const schemaProjectCount = await desktopArchive.locator('[data-project-card][data-categories*="Schema"]').count();
   await desktopArchive.locator('[data-filter="Schema"]').click();
-  results.push({ interaction: "project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === 1 });
+  results.push({ interaction: "project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === schemaProjectCount });
   const localSeoProjectCount = await desktopArchive.locator('[data-project-card][data-categories*="Local SEO"]').count();
   await desktopArchive.locator('[data-filter="Local SEO"]').click();
   results.push({ interaction: "local seo project filter", passed: (await desktopArchive.locator("[data-project-card]:visible").count()) === localSeoProjectCount });
@@ -79,6 +80,11 @@ async function main() {
   results.push(await inspectPage(desktopMeridian, "/case-study/meridianroasters/", "seo-putera-meridianroasters-desktop.png"));
   await desktopMeridian.locator("[data-lightbox]").first().click();
   results.push({ interaction: "meridianroasters lightbox", passed: await desktopMeridian.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
+
+  const desktopBiotek = await desktop.newPage();
+  results.push(await inspectPage(desktopBiotek, "/case-study/biotekfarmasi/", "seo-putera-biotekfarmasi-desktop.png"));
+  await desktopBiotek.locator("[data-lightbox]").first().click();
+  results.push({ interaction: "biotekfarmasi lightbox", passed: await desktopBiotek.locator("[data-lightbox-dialog]").evaluate((element) => element.open) });
   await desktop.close();
 
   const mobile = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, isMobile: true });
@@ -109,6 +115,9 @@ async function main() {
 
   const mobileMeridian = await mobile.newPage();
   results.push(await inspectPage(mobileMeridian, "/case-study/meridianroasters/", "seo-putera-meridianroasters-mobile.png"));
+
+  const mobileBiotek = await mobile.newPage();
+  results.push(await inspectPage(mobileBiotek, "/case-study/biotekfarmasi/", "seo-putera-biotekfarmasi-mobile.png"));
   await mobile.close();
   await browser.close();
 
