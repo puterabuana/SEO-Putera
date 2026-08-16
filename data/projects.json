@@ -264,7 +264,7 @@
       {"tool": "Seobility", "display": "100", "unit": "%", "note": "Page structure · links 100%", "delta": 42, "deltaUnit": "%"},
       {"tool": "SEO Site Checkup", "display": "82", "unit": "/100", "note": "49 passed · 11 failed", "delta": 16, "deltaUnit": ""},
       {"tool": "SEOptimer", "display": "B", "unit": "", "note": "15 recommendations · links F", "delta": null, "deltaLabel": "↑ grade"},
-      {"tool": "PageSpeed", "display": "93", "unit": "/100", "note": "Mobile · 16 Aug 2026"}
+      {"tool": "PageSpeed", "display": "93", "unit": "/100", "note": "Mobile"}
     ],
     "auditsBefore": [
       {"tool": "Rank Math", "display": "66", "unit": "/100", "note": "18 of 28 tests passed"},
