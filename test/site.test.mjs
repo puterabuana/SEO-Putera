@@ -129,8 +129,9 @@ test("Biotek Farmasi presents paired audit evidence without inventing a PageSpee
   assert.match(html, /66\s*→\s*82/);
   assert.match(html, /C\s*→\s*B/);
   assert.match(html, /SEOptimer/i);
-  assert.match(html, /No PageSpeed report was supplied/i);
-  assert.match(html, /not higher organic rankings/i);
+  assert.match(html, /93\s*\/\s*100/);
+  assert.match(html, /Google PageSpeed/i);
+  assert.match(html, /not higher\s+organic rankings/i);
   assert.match(html, /\.pdf/i);
 });
 
