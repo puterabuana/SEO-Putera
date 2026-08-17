@@ -348,7 +348,10 @@ button {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
 }
 
 .button-blue {
@@ -452,9 +455,23 @@ button {
   min-height: 210px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background:
-    linear-gradient(90deg, transparent 49.6%, rgba(255, 255, 255, 0.38) 49.6% 50.4%, transparent 50.4%),
-    linear-gradient(0deg, transparent 49.6%, rgba(255, 255, 255, 0.38) 49.6% 50.4%, transparent 50.4%),
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.16), transparent 3px);
+    linear-gradient(
+      90deg,
+      transparent 49.6%,
+      rgba(255, 255, 255, 0.38) 49.6% 50.4%,
+      transparent 50.4%
+    ),
+    linear-gradient(
+      0deg,
+      transparent 49.6%,
+      rgba(255, 255, 255, 0.38) 49.6% 50.4%,
+      transparent 50.4%
+    ),
+    radial-gradient(
+      circle at center,
+      rgba(255, 255, 255, 0.16),
+      transparent 3px
+    );
 }
 
 .audit-radar span {
@@ -522,7 +539,12 @@ button {
   padding: 26px;
   justify-content: space-between;
   background:
-    linear-gradient(135deg, transparent 0 52%, var(--blue) 52% 72%, transparent 72%),
+    linear-gradient(
+      135deg,
+      transparent 0 52%,
+      var(--blue) 52% 72%,
+      transparent 72%
+    ),
     #fff;
 }
 
@@ -572,10 +594,19 @@ button {
   background: var(--ink);
 }
 
-.audit-bars i:nth-child(1) { width: 82%; }
-.audit-bars i:nth-child(2) { width: 64%; }
-.audit-bars i:nth-child(3) { width: 92%; background: var(--blue); }
-.audit-bars i:nth-child(4) { width: 48%; }
+.audit-bars i:nth-child(1) {
+  width: 82%;
+}
+.audit-bars i:nth-child(2) {
+  width: 64%;
+}
+.audit-bars i:nth-child(3) {
+  width: 92%;
+  background: var(--blue);
+}
+.audit-bars i:nth-child(4) {
+  width: 48%;
+}
 
 .audit-sheet-head,
 .audit-sheet-foot {
@@ -752,7 +783,9 @@ button {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .filter-button:hover,
@@ -844,7 +877,9 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.34);
   background: #111;
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.42);
-  transition: transform 260ms ease, filter 260ms ease;
+  transition:
+    transform 260ms ease,
+    filter 260ms ease;
 }
 
 .project-showcase-image {
@@ -853,6 +888,10 @@ button {
   max-width: none;
   object-fit: contain;
   object-position: center;
+}
+
+.project-showcase-image-cover {
+  object-fit: cover;
 }
 
 .project-card-link:hover .project-showcase-frame {
@@ -917,8 +956,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   background:
-    linear-gradient(135deg, rgba(37, 87, 255, 0.08), transparent 44%),
-    #fff;
+    linear-gradient(135deg, rgba(37, 87, 255, 0.08), transparent 44%), #fff;
 }
 
 .project-thumb-topline {
@@ -978,9 +1016,16 @@ button {
   background: var(--ink);
 }
 
-.project-thumb-lines span:nth-child(1) { width: 72%; }
-.project-thumb-lines span:nth-child(2) { width: 48%; }
-.project-thumb-lines span:nth-child(3) { width: 88%; background: var(--blue); }
+.project-thumb-lines span:nth-child(1) {
+  width: 72%;
+}
+.project-thumb-lines span:nth-child(2) {
+  width: 48%;
+}
+.project-thumb-lines span:nth-child(3) {
+  width: 88%;
+  background: var(--blue);
+}
 
 .score-ticket {
   position: absolute;
@@ -1236,13 +1281,23 @@ button {
   flex-direction: column;
   justify-content: space-between;
   background:
-    linear-gradient(135deg, transparent 0 58%, var(--yellow) 58% 74%, transparent 74%),
+    linear-gradient(
+      135deg,
+      transparent 0 58%,
+      var(--yellow) 58% 74%,
+      transparent 74%
+    ),
     #f8f8f8;
 }
 
 .proof-card-visual-blue {
   background:
-    linear-gradient(135deg, transparent 0 50%, var(--blue) 50% 70%, transparent 70%),
+    linear-gradient(
+      135deg,
+      transparent 0 50%,
+      var(--blue) 50% 70%,
+      transparent 70%
+    ),
     #fff;
 }
 
@@ -1446,7 +1501,9 @@ button {
   background: transparent;
   text-align: left;
   cursor: pointer;
-  transition: color 180ms ease, background-color 180ms ease;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 .faq-item button > span {
@@ -2211,7 +2268,9 @@ button {
   flex-direction: column;
   border: 1px solid var(--ink);
   cursor: pointer;
-  transition: background-color 180ms ease, color 180ms ease;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 .report-card:hover {
@@ -2455,7 +2514,10 @@ button {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-12px);
-    transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+    transition:
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 180ms ease;
   }
 
   .primary-nav.is-open {
@@ -3192,7 +3254,10 @@ button {
   font-weight: 600;
   letter-spacing: -0.01em;
   box-shadow: 0 14px 30px -20px rgba(0, 0, 0, 0.5);
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease;
 }
 .hero-proof:hover {
   transform: translateY(-2px);
@@ -3308,14 +3373,18 @@ button {
 
 /* --- A little life on hover --- */
 .scoreboard-row {
-  transition: transform 200ms ease, box-shadow 200ms ease;
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease;
 }
 .scoreboard-row:hover {
   transform: translateY(-2px);
   box-shadow: 0 22px 44px -26px rgba(0, 0, 0, 0.45);
 }
 .project-card-link {
-  transition: transform 220ms ease, box-shadow 220ms ease;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
 }
 .project-card-link:hover {
   transform: translateY(-4px);
@@ -3423,7 +3492,9 @@ button {
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.02em;
-  transition: background-color 160ms ease, color 160ms ease;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
 }
 .hero-hire a::after {
   content: "\2197";

@@ -2,7 +2,9 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 
 const root = process.cwd();
-const projects = JSON.parse(await readFile(join(root, "data/projects.json"), "utf8"));
+const projects = JSON.parse(
+  await readFile(join(root, "data/projects.json"), "utf8"),
+);
 
 function escapeHtml(value) {
   return String(value)
@@ -37,12 +39,15 @@ function renderProject(project, index) {
     ? `${project.showcaseImage}?v=${encodeURIComponent(project.showcaseVersion)}`
     : project.showcaseImage;
   const supportingScores = (project.supportingScores || [])
-    .map((item) => `<span><small>${escapeHtml(item.tool)}</small><strong>${escapeHtml(item.value)}</strong></span>`)
+    .map(
+      (item) =>
+        `<span><small>${escapeHtml(item.tool)}</small><strong>${escapeHtml(item.value)}</strong></span>`,
+    )
     .join("");
   const projectVisual = hasShowcase
     ? `<img class="project-showcase-backdrop" src="${escapeHtml(showcaseSrc)}" alt="" aria-hidden="true" loading="${index === 0 ? "eager" : "lazy"}">
                   <div class="project-showcase-frame">
-                    <img class="project-showcase-image" src="${escapeHtml(showcaseSrc)}" alt="${escapeHtml(project.showcaseAlt || `${project.name} website preview`)}" loading="${index === 0 ? "eager" : "lazy"}">
+                    <img class="project-showcase-image${project.showcaseFit === "cover" ? " project-showcase-image-cover" : ""}" src="${escapeHtml(showcaseSrc)}" alt="${escapeHtml(project.showcaseAlt || `${project.name} website preview`)}" loading="${index === 0 ? "eager" : "lazy"}">
                   </div>
                   <div class="project-showcase-vignette" aria-hidden="true"></div>`
     : `<div class="project-browser" aria-hidden="true">
@@ -98,7 +103,10 @@ function getScoreboardAudits(project) {
 function renderScoreRow(project, index) {
   const audits = getScoreboardAudits(project);
   const isComparison = Boolean(project.comparison);
-  const scoreColumnCount = Math.max(5, ...projects.map((item) => getScoreboardAudits(item).length));
+  const scoreColumnCount = Math.max(
+    5,
+    ...projects.map((item) => getScoreboardAudits(item).length),
+  );
 
   const chips = audits
     .map((audit) => {
@@ -124,8 +132,11 @@ function renderScoreRow(project, index) {
                 </div>`;
     })
     .join("");
-  const emptyChips = Array.from({ length: Math.max(0, scoreColumnCount - audits.length) }, () => `
-                <div class="score-chip score-chip-empty" aria-hidden="true"></div>`).join("");
+  const emptyChips = Array.from(
+    { length: Math.max(0, scoreColumnCount - audits.length) },
+    () => `
+                <div class="score-chip score-chip-empty" aria-hidden="true"></div>`,
+  ).join("");
 
   const comparisonLabel = project.comparisonLabel || "Before → After";
   const dateHtml = isComparison
@@ -151,19 +162,23 @@ function renderScoreRow(project, index) {
 /* ---- Aggregate hero stats ---- */
 function renderStats() {
   const siteCount = projects.length;
-  const scoreCount = Math.max(...projects.map((project) => getScoreboardAudits(project).length));
+  const scoreCount = Math.max(
+    ...projects.map((project) => getScoreboardAudits(project).length),
+  );
   const primaries = [];
   for (const project of projects) {
     if (project.primaryScore?.value) primaries.push(project.primaryScore.value);
   }
   const best = primaries.length ? Math.max(...primaries) : 0;
-  const avg = primaries.length ? Math.round(primaries.reduce((a, b) => a + b, 0) / primaries.length) : 0;
+  const avg = primaries.length
+    ? Math.round(primaries.reduce((a, b) => a + b, 0) / primaries.length)
+    : 0;
 
   const stats = [
     { value: String(siteCount), label: "Live sites audited" },
     { value: String(scoreCount), label: "Core scores per site" },
     { value: `${avg}`, unit: "/100", label: "Average primary audit score" },
-    { value: `${best}`, unit: "/100", label: "Top verified score" }
+    { value: `${best}`, unit: "/100", label: "Top verified score" },
   ];
 
   return stats
@@ -172,7 +187,7 @@ function renderStats() {
               <div class="hero-stat">
                 <strong>${escapeHtml(stat.value)}${stat.unit ? `<small>${escapeHtml(stat.unit)}</small>` : ""}</strong>
                 <span>${escapeHtml(stat.label)}</span>
-              </div>`
+              </div>`,
     )
     .join("");
 }
