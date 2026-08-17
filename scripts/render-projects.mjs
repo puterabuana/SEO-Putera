@@ -47,7 +47,7 @@ function renderProject(project, index) {
   const projectVisual = hasShowcase
     ? `<img class="project-showcase-backdrop" src="${escapeHtml(showcaseSrc)}" alt="" aria-hidden="true" loading="${index === 0 ? "eager" : "lazy"}">
                   <div class="project-showcase-frame">
-                    <img class="project-showcase-image${project.showcaseFit === "cover" ? " project-showcase-image-cover" : ""}" src="${escapeHtml(showcaseSrc)}" alt="${escapeHtml(project.showcaseAlt || `${project.name} website preview`)}" loading="${index === 0 ? "eager" : "lazy"}">
+                    <img class="project-showcase-image${project.showcaseFit === "cover" ? " project-showcase-image-cover" : ""}"${project.showcaseFit === "cover" ? ' style="object-fit: cover"' : ""} src="${escapeHtml(showcaseSrc)}" alt="${escapeHtml(project.showcaseAlt || `${project.name} website preview`)}" loading="${index === 0 ? "eager" : "lazy"}">
                   </div>
                   <div class="project-showcase-vignette" aria-hidden="true"></div>`
     : `<div class="project-browser" aria-hidden="true">
