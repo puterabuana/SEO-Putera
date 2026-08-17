@@ -770,6 +770,9 @@
       }
     ],
     "scope": "Yoga studio website",
-    "categories": ["Technical SEO", "On-Page", "Local SEO"]
+    "categories": ["Technical SEO", "On-Page", "Local SEO"],
+    "showcaseImage": "/assets/images/projects/liemoro-showcase.png",
+    "showcaseVersion": "20260817-1",
+    "showcaseAlt": "Liemoro yoga studio website preview across desktop, tablet, and mobile devices"
   }
 ]
